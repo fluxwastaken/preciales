@@ -10,5 +10,5 @@ public class OnlineShopPrecialesApplication {
 
 		SpringApplication.run(OnlineShopPrecialesApplication.class, args);
 	}
-	//test
+	//test 2
 }
