@@ -1,0 +1,38 @@
+.header {
+    background-color: #8B6A59;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .headerContent {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .headerTitle {
+    margin: 0;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px; /* Adjust this value as needed */
+  }
+  
+  .headerBtn {
+    background-color: #8B6A59;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 0 10px;
+  }
+  
+  .headerBtn:hover {
+    color: #E6C7B8;
+  }
+  
