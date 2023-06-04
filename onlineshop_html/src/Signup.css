@@ -21,6 +21,7 @@
   /* Add additional src lines for other font file formats */
 }
 
+
   .welcome-container {
     display: flex;
     justify-content: center;
@@ -39,14 +40,21 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    margin-top: 200px; /* Adjust the top margin as needed */
+    margin-top: 35px !important; /* Adjust the top margin as needed */
   }
-
-
-.tableContainer {
+  
+  
+.table-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.enterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
   .cell_left{
@@ -79,6 +87,21 @@
     border-radius: 5px;
     padding: 10px;
   }
+
+  .email_input {
+    background-color: #F1EBE7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+  }
+
+  .email_input:hover {
+    background-color: #E6C7B8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
   
   .password_input {
     background-color: #F1EBE7;
@@ -94,14 +117,9 @@
     border-radius: 5px;
     padding: 10px;
   }
-  
-  .buttonRow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .seller,.buyer{
+  .buyer,
+  .seller {
     font-family: 'Articulat-Bold';
     background-color: #8B6A59;
     color: white;
@@ -109,16 +127,25 @@
     border: none;
     padding: 0 10px;
     height: 40px;
-    width: 130px;
-    margin: 10px;
+    margin: 20px;
+    width: 150px;
   }
+
+.buttonRow {
+  display: flex; /* Add a flex container to hold the buttons */
+  justify-content: center; /* Center the buttons horizontally */
+}
 
   .seller:hover,.buyer:hover{
     background-color: #E6C7B8;
     color: #8B6A59;
   }
 
-
-
+  .question_enter{
+    font-family: 'Georgia_Italic';
+    color: #8B6A59;
+    font-size: 20px;
+    margin-bottom: 5px; /* Add margin at the bottom to create space between text and buttons */
+  }
 
   

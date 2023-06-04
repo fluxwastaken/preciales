@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Login1.css';
+import './Signup.css';
 import NavBar1 from './NavBar1';
 
 function Signup() {
@@ -14,6 +14,7 @@ function Signup() {
   // field for answering
   const [inputValue1, setInputValue1] = useState('');
   const [inputValue2, setInputValue2] = useState('');
+  const [inputValue3, setInputValue3] = useState('');
   const [buyerButtonText, setBuyerButtonText] = useState('BUYER');
   const [sellerButtonText, setSellerButtonText] = useState('SELLER');
 
@@ -25,11 +26,15 @@ function Signup() {
     setInputValue2(event.target.value);
   };
 
+  const handleChange3 = (event) => {
+    setInputValue3(event.target.value);
+  };
+
   //making buyer into login when mouseover
   useEffect(() => {
     const buyerButton = document.getElementById('buyer');
     buyerButton.addEventListener('mouseover', () => {
-      setBuyerButtonText('LOGIN');
+      setBuyerButtonText('SIGN-UP');
     });
     buyerButton.addEventListener('mouseout', () => {
       setBuyerButtonText('BUYER');
@@ -37,7 +42,7 @@ function Signup() {
 
     return () => {
       buyerButton.removeEventListener('mouseover', () => {
-        setBuyerButtonText('LOGIN');
+        setBuyerButtonText('SIGN-UP');
       });
       buyerButton.removeEventListener('mouseout', () => {
         setBuyerButtonText('BUYER');
@@ -49,7 +54,7 @@ function Signup() {
   useEffect(() => {
     const sellerButton = document.getElementById('seller');
     sellerButton.addEventListener('mouseover', () => {
-      setSellerButtonText('LOGIN');
+      setSellerButtonText('SIGN-UP');
     });
     sellerButton.addEventListener('mouseout', () => {
       setSellerButtonText('SELLER');
@@ -57,7 +62,7 @@ function Signup() {
 
     return () => {
       sellerButton.removeEventListener('mouseover', () => {
-        setSellerButtonText('LOGIN');
+        setSellerButtonText('SIGN-UP');
       });
       sellerButton.removeEventListener('mouseout', () => {
         setSellerButtonText('SELLER');
@@ -73,7 +78,7 @@ function Signup() {
 
       <div className="body">
         <div className="welcome-container">
-          <p className="welcome">welcome back, gorgeous!</p>
+          <p className="welcome">hey there, beautiful!</p>
         </div>
 
         <div className="tableContainer">
@@ -91,25 +96,38 @@ function Signup() {
                 </td>
               </tr>
               <tr>
-                <td className="cell_left">password*</td>
+                <td className="cell_left">email*</td>
                 <td className="cell_right">
                   <input
-                    className="password_input"
+                    className="email_input"
                     type="text"
                     value={inputValue2}
                     onChange={handleChange2}
                   />
                 </td>
               </tr>
-              {/* Add more <tr> elements for additional rows */}
+              <tr>
+                <td className="cell_left">password*</td>
+                <td className="cell_right">
+                  <input
+                    className="password_input"
+                    type="text"
+                    value={inputValue3}
+                    onChange={handleChange3}
+                  />
+                </td>
+              </tr>
             </tbody>
           </table>
-        </div>
+      </div>
 
+      <div className="enterContainer">
+        <p className="question_enter">what are you signing up as?</p>
         <div className="buttonRow">
           <button id="buyer" className="buyer">{buyerButtonText}</button>
           <button id="seller" className="seller">{sellerButtonText}</button>
         </div>
+      </div>
       </div>
     </div>
   );
