@@ -119,7 +119,7 @@ function Signup() {
               </tr>
             </tbody>
           </table>
-      </div>
+        </div>
 
       <div className="enterContainer">
         <p className="question_enter">what are you signing up as?</p>

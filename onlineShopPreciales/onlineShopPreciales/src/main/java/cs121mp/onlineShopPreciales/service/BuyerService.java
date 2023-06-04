@@ -21,8 +21,11 @@ public class BuyerService {
     public List<Buyer> searchBuyer(String keyword){
         return buyerRepository.findByBuyerNameContains(keyword);
     }
+    public Optional<Buyer> searchBuyerEmail(String keyword){ return buyerRepository.findByBuyerEmail(keyword);}
     public Optional<Buyer> getBuyerInfo(Integer buyer_id){
         return buyerRepository.findById(buyer_id);
     }
+
+    public void deleteBuyer(Integer buyer_id){ buyerRepository.deleteById(buyer_id);}
 
 }
