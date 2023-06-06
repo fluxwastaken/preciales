@@ -17,5 +17,6 @@ public class SellerService {
     public List<Seller> getAllSellers(){return sellerRepository.findAll();}
     public void addSeller(Seller seller){sellerRepository.save(seller);}
     public List<Seller> searchSeller(String keyword){return sellerRepository.findBySellerNameContains(keyword);}
+    public Optional<Seller> searchSellerEmail(String keyword){ return sellerRepository.findBySellerEmail(keyword);}
     public Optional<Seller> getSellerInfo(Integer seller_id){return sellerRepository.findById(seller_id);}
 }

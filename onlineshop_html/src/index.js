@@ -5,24 +5,25 @@ import './index.css';
 // import Login from './Login';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Login1 from './Login1';
-import Signup from './Signup';
 import Buyers from './BuyersPage';
-import AddBuyer from './AddBuyer';
+import Signup from './Signup';
 //npm install react-router-dom
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import LoginBuyer from './LoginBuyer';
+import BuyersPage from './BuyersPage'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-       <Route path="" element= {<Login1></Login1>}></Route>
-       <Route path='/home/loginBuyer=true/:buyer_id' element = {<Login1></Login1>}></Route>
-       {/* <Route path="/home" element= {<Login1></Login1>}></Route> */}
-       <Route path="/loginBuyer" element = {<LoginBuyer></LoginBuyer>}></Route>
+       <Route path="" element= {<LoginBuyer></LoginBuyer>}></Route>
        <Route path='/buyers' element ={<Buyers></Buyers>}></Route>
-       <Route path ='/buyers/new' element ={<AddBuyer></AddBuyer>}></Route>
+       <Route path ='/newUser' element ={<Signup></Signup>}></Route>
+       <Route path='/home/loginBuyer=true/:buyer_email' element = {<BuyersPage></BuyersPage>}></Route>
+       {/* <Route path="/home" element= {<Login1></Login1>}></Route> */}
+       <Route path="/loginUser" element = {<LoginBuyer></LoginBuyer>}></Route>
+
     </Routes>
   </BrowserRouter>
   // <React.StrictMode>

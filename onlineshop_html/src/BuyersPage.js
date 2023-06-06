@@ -6,6 +6,7 @@ function Buyers() {
   return(
     <div>
       <NavBar2 />
+      <h1>Hello welkam</h1>
     </div>
   );
 }
