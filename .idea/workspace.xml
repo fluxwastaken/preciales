@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/controller/BuyerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Buyer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Seller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/repository/BuyerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/service/BuyerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/OnlineShopPrecialesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/OnlineShopPrecialesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/controller/BuyerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/controller/BuyerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Buyer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/repository/BuyerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/repository/BuyerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/service/BuyerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/service/BuyerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

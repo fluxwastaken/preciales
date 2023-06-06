@@ -2,15 +2,13 @@ package cs121mp.onlineShopPreciales.model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "buyers")
 public class Buyer {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "buyer_id")
     @JsonProperty("buyer_id")
     Integer buyerId;

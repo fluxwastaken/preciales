@@ -22,6 +22,9 @@ public class SellerController {
 
     @PostMapping("/addSeller")
     public ResponseEntity<Void> addSeller(@RequestBody Seller payload){
+        if (payload.getSellerId() == null) {
+            payload.setSellerId(null);
+        }
         sellerService.addSeller(payload);
         return ResponseEntity.ok(null);
     }
