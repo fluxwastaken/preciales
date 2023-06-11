@@ -3,6 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import './BuyersPage.css';
 import NavBar2 from './NavBar2';
 import productImage from './images/1.jpg'; // Import the image file
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Product from './components/Product';
 
 function BuyersPage() {
   const [products, setProducts] = useState([]);
@@ -21,21 +24,73 @@ function BuyersPage() {
     }
   };
 
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleSearchInputChange = (event) => {
+    setSearchValue(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    // Perform search logic or trigger a search API request using the searchValue
+    console.log('Search submitted:', searchValue);
+  };
+
   return (
     <div>
-      <NavBar2 />
-      <div id='productDiv'>
-        {products.map((product) => (
-          <div key={product.product_id} className='productItem'>
-            <h3>{product.product_name}</h3>
-            <p>Category: {product.category}</p>
-            <p>Quantity: {product.quantity}</p>
-            <p>Price: {product.price}</p>
-            <p>Description: {product.description}</p>
-            <img src={productImage} alt={product.product_name} />
+      <header>
+        <div className="navbar">
+          <div className="headerContent">
+            <p className="headerTitle">preciales</p>
+            <div className="buttonContainer_left">
+              <button className="products">Products</button>
+            </div>
+
+            <div className="searchBarContainer">
+              <form onSubmit={handleSearchSubmit}>
+                <div className="searchInputContainer">
+                  <input
+                    type="text"
+                    placeholder="What are you looking for?"
+                    value={searchValue}
+                    onChange={handleSearchInputChange}
+                    className="searchInput"
+                  />
+                  <button type="submit" className="searchButton">
+                    Search
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div className="buttonContainer_right">
+              <button className="headerBtn">Shopping Cart</button>
+              {/* idk how to make this change depending on the username */}
+              {/* <button className="headerBtn">username</button> */}
+              <p className="username_display">username</p>
+            </div>
           </div>
-        ))}
+        </div>
+      </header>
+
+
+      <div id='productDiv'>
+        <h1 className = "categoryTitle">All products</h1>
+        <Row>
+          {products.map((product) => (
+            <Col key={product.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">
+              <Product product = {product}></Product>
+            </Col>
+          ))}
+        </Row>
       </div>
+
+      <footer>
+        <div className = "footerContainer">
+          <p>All rights reserved.</p>
+        </div>
+      </footer>
+
     </div>
   );
 }

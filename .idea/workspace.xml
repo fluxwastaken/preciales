@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="Sign up for seller and buyer complete. Log-in logic done.">
-      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" afterDir="false" />
-    </list>
+    <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="BuyersPage updated with products displayed, Products card" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,21 +22,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rmarv/Documents/cs121-mp&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/cs 121 mp(2)/cs121-mp",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rmarv\Documents\cs121-mp\onlineshop_html\src\images" />
@@ -57,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685894449404</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="BuyersPage updated with products displayed, Products card">
+      <created>1686493832064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686493832064</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +96,7 @@
       <path value="$PROJECT_DIR$/cs121-mp" />
     </ignored-roots>
     <MESSAGE value="Sign up for seller and buyer complete. Log-in logic done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sign up for seller and buyer complete. Log-in logic done." />
+    <MESSAGE value="BuyersPage updated with products displayed, Products card" />
+    <option name="LAST_COMMIT_MESSAGE" value="BuyersPage updated with products displayed, Products card" />
   </component>
 </project>
