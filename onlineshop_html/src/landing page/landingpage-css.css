@@ -1,3 +1,28 @@
+/* SCROLL BAR */
+/* Width and height of the scrollbar track */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f5e6de;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #92786b;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #644231;
+}
+
+
+
+
 .main-container{
   
     display: grid;
@@ -41,11 +66,6 @@
 
   #btn-login{
     float: right;
-  }
-
-  #body-container{
-    background-color: rgb(255,253,251);
-    height: 500px;
   }
 
   .body1-container{
@@ -349,10 +369,50 @@
     padding-top: 50px;
   }
   
+
+  #body3-container{
+    background-color: rgb(255,253,251);
+    height: 500px;
+
+    margin-top: 80px;
+    justify-content: center;
+    content: "";
+    display: table;
+    clear: both;
+
+
+    text-align: justify;
+
+
+  }
+  #body3-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #column {
+    float: left;
+    background-color: rgb(255,253,251);
+    width: 31.96%;
+    padding: 10px;
+    height: 500px;
+
+   
+  }
+
+  #column > p{
+    padding-left: 90px;
+  }
+
+  #column > h2{
+    padding-left: 90px;
+  }
+
 p{
     color: #8B6A59;
     font-size: larger;
-
+    
 
 }
 body{
@@ -361,6 +421,7 @@ body{
 
     font-family: Verdana, sans-serif; 
     margin:0;
+   
 }
 
 
