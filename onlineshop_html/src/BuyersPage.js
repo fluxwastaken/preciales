@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './BuyersPage.css';
 import NavBar2 from './NavBar2';
-import productImage from './images/1.jpg'; // Import the image file
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from './components/Product';
@@ -23,9 +22,9 @@ function BuyersPage() {
       console.error(error);
     }
   };
-
+  const { buyer_email } = useParams();
   const [searchValue, setSearchValue] = useState('');
-
+  
   const handleSearchInputChange = (event) => {
     setSearchValue(event.target.value);
   };
@@ -67,7 +66,7 @@ function BuyersPage() {
               <button className="headerBtn">Shopping Cart</button>
               {/* idk how to make this change depending on the username */}
               {/* <button className="headerBtn">username</button> */}
-              <p className="username_display">username</p>
+              <p className="username_display">{buyer_email}</p>
             </div>
           </div>
         </div>

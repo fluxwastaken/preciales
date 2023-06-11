@@ -13,6 +13,7 @@ import LoginBuyer from './LoginBuyer';
 import BuyersPage from './BuyersPage';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
