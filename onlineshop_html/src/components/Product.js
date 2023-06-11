@@ -18,7 +18,7 @@ function Product(props) {
   return (
     <div className="product-container">
       <Card className="product-card">
-        {/* <img src={productImage} alt={product.product_name} /> */}
+        <Card.Img src={product.picture} alt={product.product_name} className='product-card-image' />
         <Card.Body>
           <Card.Title className="product-card-title">{product.product_name}</Card.Title>
           <Card.Text className="product-card-text">Price: {product.price}</Card.Text>
