@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Georgia_Italic';
+    src: url('./fonts/GeorgiaPro-Italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Georgia_Light';
+    src: url('./fonts/GeorgiaPro-Light.ttf') format('truetype');
+    /* Add additional src lines for other font file formats */
+  }
+  
+  @font-face {
+    font-family: 'Articulat-Bold';
+    src: url('./fonts/ArticulatCF-Bold.ttf') format('truetype');
+    /* Add additional src lines for other font file formats */
+  }
+  
+  @font-face {
+    font-family: 'Articulat-Normal';
+    src: url('./fonts/ArticulatCF-Normal.ttf') format('truetype');
+    /* Add additional src lines for other font file formats */
+  }
+
+  /* SCROLL BAR */
+  /* Width and height of the scrollbar track */
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f5e6de;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #92786b;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #644231;
+  }
+  /* NAVBAR */
+  .navbar {
+    background-color: #8B6A59;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to evenly distribute content */
+    margin: 0px;
+  }
+  
+  .headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .headerTitle {
+    margin: 0;
+    font-family: 'Articulat-Bold';
+  }
+  
+  .buttonContainer_left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 150px; /* Adjust this value as needed */
+  }
+  
+  .products {
+    font-family: 'Articulat-Normal';
+    background-color: #8B6A59;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 0 20px;
+  }
+  
+  .buttonContainer_right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px; /* Adjust this value as needed */
+  }
+  
+  .username_display {
+    margin: 20px; /* Add this line to set equal margin from top and bottom */
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Articulat-Bold';
+  }
+  
+  .products:hover {
+    color: #E6C7B8;
+  }
+  
+  .headerBtn {
+    font-family: 'Articulat-Normal';
+    background-color: #8B6A59;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 0 10px;
+  }
+  
+  .headerBtn:hover {
+    color: #E6C7B8;
+  }
+  
+  /* SEARCH BAR */
+  .searchBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .searchInputContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchInput {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 400px; /* Adjust this value as needed */
+    font-family: 'Articulat-Normal';
+    font-size: 18px;
+  }
+  
+  .searchButton {
+    font-family: 'Articulat-Normal';
+    margin-left: 8px;
+    padding: 8px 16px;
+    background-color: #E6C7B8;
+    color: #644231;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .searchButton:hover {
+    background-color: #c09b88;
+    color: #ffffff;
+  }
+  
+  /* BODY */
+  .imageContainer {
+    display: block;
+    width: 98.5vw; /* Update width to 100vw */
+    height: auto;
+
+    opacity: 50%;
+    overflow-x: hidden; /* Add this line to hide horizontal overflow */
+  }
+  
+
+  .productTitle{
+    font-family: 'Georgia_Italic';
+    color:#644231;
+  }
