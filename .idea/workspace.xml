@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="Sign up for seller and buyer complete. Log-in logic done.">
-      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" afterDir="false" />
+    <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="Product Spring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
