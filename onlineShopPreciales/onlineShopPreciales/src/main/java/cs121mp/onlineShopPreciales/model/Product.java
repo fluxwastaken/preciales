@@ -12,10 +12,6 @@ public class Product {
     @JsonProperty("product_id")
     Integer productId;
 
-    @Column(name = "seller_id")
-    @JsonProperty("seller_id")
-    Integer sellerId;
-
     @Column(name = "product_name")
     @JsonProperty("product_name")
     String productName;
@@ -36,10 +32,9 @@ public class Product {
     @JsonProperty("description")
     String productDescription;
 
-    @Lob
     @Column(name = "picture")
     @JsonProperty("picture")
-    Byte productPicture;
+    String productPicture;
 
     public Product(){
 
@@ -51,14 +46,6 @@ public class Product {
 
     public void setProductId(Integer productId) {
         this.productId = productId;
-    }
-
-    public Integer getSellerId() {
-        return sellerId;
-    }
-
-    public void setSellerId(Integer sellerId) {
-        this.sellerId = sellerId;
     }
 
     public String getProductName() {
@@ -101,11 +88,11 @@ public class Product {
         this.productDescription = productDescription;
     }
 
-    public Byte getProductPicture() {
+    public String getProductPicture() {
         return productPicture;
     }
 
-    public void setProductPicture(Byte productPicture) {
+    public void setProductPicture(String productPicture) {
         this.productPicture = productPicture;
     }
 }

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="Sign up for seller and buyer complete. Log-in logic done.">
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/repository/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/BuyersPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/BuyersPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/onlineShopPreciales/onlineShopPreciales/src/main/java/cs121mp/onlineShopPreciales/model/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +36,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rmarv\Documents\cs121-mp\onlineshop_html\src\images" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
