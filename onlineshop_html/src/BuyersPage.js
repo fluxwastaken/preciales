@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import './BuyersPage.css';
-import NavBar2 from './NavBar2';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from './components/Product';
@@ -75,39 +74,49 @@ function BuyersPage() {
     navigate('/home')
   }
 
+  const handleProductsClick =()=>{
+    navigate(`/home/loginBuyer=true/${buyer.buyer_email}`)
+  }
+
   return (
     <div>
       <header>
-        <div className="navbar">
+      <div className="navbar">
           <div className="headerContent">
-            <p className="headerTitle">preciales</p>
-            <div className="buttonContainer_left">
-              <button className="products" onClick={handleLogoutClick}>Log-out</button>
-            </div>
-
-            <div className="searchBarContainer">
-              <form onSubmit={handleSearchSubmit}>
-                <div className="searchInputContainer">
-                  <input
-                    type="text"
-                    placeholder="What are you looking for?"
-                    value={searchValue}
-                    onChange={handleSearchInputChange}
-                    className="searchInput"
-                  />
-                  <button type="submit" className="searchButton">
-                    Search
-                  </button>
+            <Row className="align-items-center">
+              <Col xs={3} className="headerCol">
+                <p className="headerTitle">preciales</p>
+                <div className="buttonContainer_left">
+                <button className="products"onClick={handleProductsClick}>Products</button>
                 </div>
-              </form>
-            </div>
+              </Col>
 
-            <div className="buttonContainer_right">
-              <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
-              {/* idk how to make this change depending on the username */}
-              {/* <button className="headerBtn">username</button> */}
-              <p className="username_display">{buyer.buyer_name}</p>
-            </div>
+              <Col xs={5} className="headerCol">
+                <div className="searchBarContainer">
+                  <form onSubmit={handleSearchSubmit}>
+                    <div className="searchInputContainer">
+                      <input
+                        type="text"
+                        placeholder="What are you looking for?"
+                        value={searchValue}
+                        onChange={handleSearchInputChange}
+                        className="searchInput"
+                      />
+                      <button type="submit" className="searchButton">
+                        Search
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                </Col>
+              <Col xs={3} className="headerCol">
+                <div className="buttonContainer_right">
+                  <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
+                  <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
+                  <p className="username_display">{buyer.buyer_name}</p>
+                  </div>
+              </Col>
+            </Row>
           </div>
         </div>
       </header>

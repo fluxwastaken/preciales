@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import NavBar1 from './NavBar1';
+import NavBar1 from './components/NavBar1';
 
 const LoginBuyer = () => {
   const [buyer, setBuyer] = useState({

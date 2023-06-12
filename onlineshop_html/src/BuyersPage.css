@@ -64,41 +64,52 @@
 .headerTitle {
   margin: 0 ;
   font-family: 'Articulat-Bold';
+  text-align: left;
+  padding-left: 20px;
+  color:#ffffff;
+  width: 400px;
 }
 
 .buttonContainer_left {
   display: flex;
   align-items: center;
   position: absolute;
-  left: 150px; /* Adjust this value as needed */
+  left: 20px; /* Adjust this value as needed */
+  text-align: center;
 }
 
 .products {
   font-family: 'Articulat-Normal';
   background-color: #8B6A59;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   border: none;
-  padding: 0 20px;
+  padding: 10px;
+  width: 100px;
+  text-align: left;
+  margin: 20px;
+}
+
+.products:hover {
+  color: #E6C7B8;
 }
 
 .buttonContainer_right {
   display: flex;
   align-items: center;
   position: absolute;
-  right: 20px; /* Adjust this value as needed */
+  right: 20px; 
+  text-align: center;
 }
 
 .username_display {
-  margin: 20px; /* Add this line to set equal margin from top and bottom */
+  margin: 20px;
   padding: 0;
   font-size: 20px;
-  font-family: 'Articulat-Bold';
+  font-family: 'Articulat-Bold'; 
+  color: white;
 }
 
-.products:hover {
-  color: #E6C7B8;
-}
 
 .headerBtn {
   font-family: 'Articulat-Normal';
@@ -113,12 +124,20 @@
   color: #E6C7B8;
 }
 
+.headerCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* SEARCH BAR */
 .searchBarContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  text-align: center;
+  width: 1300px;
 }
 
 .searchInputContainer {

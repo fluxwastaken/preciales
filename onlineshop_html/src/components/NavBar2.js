@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './NavBar2.css';
+import SearchBar from '../SearchBar';
 
 function NavBar2() {
     const SearchBar = () => {
