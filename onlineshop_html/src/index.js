@@ -20,7 +20,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-       <Route path="" element= {<LoginBuyer></LoginBuyer>}></Route>
+       <Route path="/home" element= {<LoginBuyer></LoginBuyer>}></Route>
        <Route path='/buyers' element ={<Buyers></Buyers>}></Route>
        <Route path ='/newUser' element ={<Signup></Signup>}></Route>
        <Route path='/home/loginBuyer=true/:buyer_email' element = {<BuyersPage></BuyersPage>}></Route>

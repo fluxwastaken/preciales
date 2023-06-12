@@ -71,6 +71,10 @@ function BuyersPage() {
     navigate(`/viewCart/${buyer.buyer_id}`)
   }
 
+  const handleLogoutClick=()=>{
+    navigate('/home')
+  }
+
   return (
     <div>
       <header>
@@ -78,7 +82,7 @@ function BuyersPage() {
           <div className="headerContent">
             <p className="headerTitle">preciales</p>
             <div className="buttonContainer_left">
-              <button className="products">Products</button>
+              <button className="products" onClick={handleLogoutClick}>Log-out</button>
             </div>
 
             <div className="searchBarContainer">
