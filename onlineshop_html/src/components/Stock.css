@@ -35,8 +35,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px; /* Adjust the width as needed */
-    height: 570px; /* Adjust the height as needed */
-    margin: 3px  }
+    height: 610px; /* Adjust the height as needed */
+    margin: 3px;
+    background-color: #f6e2d9;  
+  }
   
   .product-card-title {
     font-size: 25px;
@@ -44,19 +46,19 @@
     margin-bottom: 0px;
     font-family: 'Articulat-Bold';
   }
+  
+  .product-card-text {
+    color: #3d3d3d;
+    margin-bottom: 10px;
+    font-family: 'Articulat-Normal';
+  }
 
-  .product-card-text.price {
+  .product-card-text.qty {
     color: #888;
     margin-bottom: 10px;
     margin-top: 0px;
     font-size: 20px;
     font-family: 'Articulat-Bold';
-  }
-  
-  .product-card-text {
-    color: #888;
-    margin-bottom: 10px;
-    font-family: 'Articulat-Normal';
   }
   
   .product-card-button {
@@ -68,6 +70,7 @@
     text-decoration: none;
     font-family: 'Articulat-Bold';
     width: 100%;
+    margin-top: 10px;
   }
   
   .product-card-button:hover {
@@ -81,4 +84,33 @@
     outline: none;
   }
 
+  .stock-input {
+    font-family: 'Articulat-Normal';
+    width: 100px; /* Adjust the width as needed */
+    height: 40px;
+    margin-top: 30px;
+  }
   
+  .add-stock-button {
+    background-color: #be9684;
+    color: #fff;
+    /* height: 30px; */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Articulat-Bold';
+    margin-left: 8px;
+  }
+
+  .add-stock-button:hover {
+    background-color: #8B6A59;
+    color: #fff;
+    outline: none;
+  }
+
+  .add-stock-button:active {
+    background-color: #8B6A59;
+    color: #fff;
+    outline: none;
+  }

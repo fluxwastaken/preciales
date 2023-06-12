@@ -78,14 +78,14 @@ function BuyersPage() {
         <Row>
           {products.map((product) => (
             <Col key={product.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">
-              <Product product = {product}></Product>
+              <Product product={product}></Product>
             </Col>
           ))}
         </Row>
       </div>
 
       <footer>
-        <div className = "footerContainer">
+        <div className="footerContainer">
           <p>All rights reserved.</p>
         </div>
       </footer>

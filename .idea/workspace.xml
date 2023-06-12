@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="BuyersPage updated with products displayed, Products card" />
+    <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="BuyersPage updated with products displayed, Products card (NEXT VERSION 2)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +32,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/cs 121 mp(2)/cs121-mp",
+    "last_opened_file_path": "C:/Users/user/Desktop/cs 121 mp(2)/cs121-mp/onlineShopPreciales",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -65,7 +67,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686493832064</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BuyersPage updated with products displayed, Products card (NEXT VERSION)">
+      <created>1686495249976</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686495249976</updated>
+    </task>
+    <task id="LOCAL-00004" summary="BuyersPage updated with products displayed, Products card (NEXT VERSION 2)">
+      <created>1686495544554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686495544554</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +113,8 @@
     </ignored-roots>
     <MESSAGE value="Sign up for seller and buyer complete. Log-in logic done." />
     <MESSAGE value="BuyersPage updated with products displayed, Products card" />
-    <option name="LAST_COMMIT_MESSAGE" value="BuyersPage updated with products displayed, Products card" />
+    <MESSAGE value="BuyersPage updated with products displayed, Products card (NEXT VERSION)" />
+    <MESSAGE value="BuyersPage updated with products displayed, Products card (NEXT VERSION 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="BuyersPage updated with products displayed, Products card (NEXT VERSION 2)" />
   </component>
 </project>
