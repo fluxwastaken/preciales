@@ -4,7 +4,14 @@ import Button from 'react-bootstrap/Button';
 import './Product.css';
 
 function Product(props) {
-  const { product } = props;
+  const { product,buyer_id,product_id} = props;
+
+  const [carts, setCarts] = useState({
+  buyer_id:buyer_id,
+  product_id:product_id,
+  quantity:1
+  }); 
+
   const [buttonText, setButtonText] = useState('Add to Cart');
 
   const handleAddToCart = () => {
@@ -13,6 +20,22 @@ function Product(props) {
     setTimeout(() => {
       setButtonText('Add to Cart');
     }, 400); // Revert to 'Add to Cart' after 2 seconds (adjust the delay as needed)
+
+    // Make the API call or perform any other desired action
+    fetch('http://localhost:8080/addCartProduct', {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(carts)
+    })
+      .then(response => {
+        console.log("Valid Add to Cart")
+      })
+      .catch(error => {
+        console.log("Error Adding to Cart")
+      });
   };
 
   return (

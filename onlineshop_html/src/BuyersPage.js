@@ -25,15 +25,18 @@ function BuyersPage() {
     getBuyerDetails();
   }, []);
 
-  const getBuyerDetails = async () =>{
+  const getBuyerDetails = async () => {
     try {
       const response = await fetch(`http://localhost:8080/searchBuyerEmail?keyword=${buyer_email}`);
       const buyerData = await response.json();
-      setBuyer(buyerData)
+      if (buyerData) {
+        setBuyer(buyerData);
+      }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
+
   const getProducts = async () => {
     try {
       let response = await fetch('http://localhost:8080/getProducts');
@@ -99,7 +102,7 @@ function BuyersPage() {
               <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
               {/* idk how to make this change depending on the username */}
               {/* <button className="headerBtn">username</button> */}
-              <p className="username_display">{buyer_email}</p>
+              <p className="username_display">{buyer.buyer_name}</p>
             </div>
           </div>
         </div>
@@ -111,7 +114,7 @@ function BuyersPage() {
         <Row>
           {products.map((product) => (
             <Col key={product.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">
-              <Product product={product}></Product>
+              <Product product={product} buyer_id={buyer.buyer_id} product_id={product.product_id}></Product>
             </Col>
           ))}
         </Row>
