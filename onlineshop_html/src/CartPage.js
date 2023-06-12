@@ -42,7 +42,7 @@ function CartPage() {
 
   const getBuyerDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/getBuyerInfo/${buyer.buyer_id}`);
+      const response = await fetch(`http://localhost:8080/getBuyerInfo/${buyer_id}`);
       const buyerData = await response.json();
       if (buyerData) {
         setBuyer(buyerData);
