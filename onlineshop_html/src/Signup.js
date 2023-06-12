@@ -24,6 +24,7 @@ const Signup = () => {
   const [inputValue1, setInputValue1] = useState("");
   const [inputValue2, setInputValue2] = useState("");
   const [inputValue3, setInputValue3] = useState("");
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -97,6 +98,7 @@ const Signup = () => {
     })
       .then(response => {
         console.log("Valid Seller Sign-up")
+        navigate('/loginUser');
       })
       .catch(error => {
         console.log("Error Signing-up Seller")

@@ -32,10 +32,12 @@ public class SellerController {
     public ResponseEntity<List<Seller>> searchSeller(@RequestParam String keyword){
         return ResponseEntity.ok(sellerService.searchSeller(keyword));
     }
+
     @GetMapping("/searchSellerEmail")
     public ResponseEntity<Optional<Seller>> searchSellerEmail(@RequestParam String keyword){
         return ResponseEntity.ok(sellerService.searchSellerEmail(keyword));
     }
+
     @GetMapping("/getSellerInfo/{seller_id}")
     public ResponseEntity<Optional<Seller>> getInfo(@PathVariable String seller_id){
         return ResponseEntity.ok(sellerService.getSellerInfo(Integer.valueOf(seller_id)));

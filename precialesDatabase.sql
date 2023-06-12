@@ -28,5 +28,16 @@ category TEXT NOT NULL,
 quantity INT NOT NULL,
 price DOUBLE PRECISION NOT NULL,
 description TEXT DEFAULT 'n/a',
-picture BYTEA
+picture VARCHAR
 )
+
+CREATE TABLE userdatabase.carts(
+buyer_id INT NOT NULL REFERENCES userdatabase.buyers(buyer_id),
+product_id INT NOT NULL REFERENCES userdatabase.products(product_id),
+quantity INT NOT NULL
+)
+
+INSERT INTO userdatabase.carts
+VALUES(18,8,5)
+
+SELECT * FROM userdatabase.carts
