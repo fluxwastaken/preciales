@@ -41,6 +41,8 @@
     .headerTitle {
       margin: 0;
       font-family: 'Articulat-Bold';
+      color: white;
+      font-size: 30px;
     }
     
     .buttonContainer {
