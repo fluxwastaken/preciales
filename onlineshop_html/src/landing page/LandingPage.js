@@ -1,6 +1,7 @@
 import './LandingPage.css';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
 function LandingPage(){
     const navigate = useNavigate();
     
@@ -9,7 +10,7 @@ const handleShopClick = () =>{
 }
 return(
 
-    <div class="main-container">
+    <div className="main-container">
 
 <div id="header-container"> 
     {/* <!-- <div id="button-header">
@@ -30,7 +31,7 @@ return(
 </div>
 
 
-<div class="body1-container"> 
+<div className="body1-container">
         <div id="img-circle">
             <img id="lp-2" src="landing-2.png" height="400" width="400"></img>
         </div>
@@ -47,7 +48,7 @@ return(
             </p>
        </div>
 </div>
-<div class="body2-container"> 
+<div className="body2-container">
     <div id="brownsqr-container">
         <div id="brownsqr"></div>
     </div>

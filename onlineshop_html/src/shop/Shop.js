@@ -1,4 +1,5 @@
 import './Shop.css';
+import React from 'react';
 
 function Shop(){
 
