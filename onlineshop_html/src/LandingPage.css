@@ -50,7 +50,7 @@
 
   #header-container{
     background-color: rgb(139,106,89);
-    height: 40px;
+    height: 80px;
   }
 
   #button-header{
@@ -105,7 +105,7 @@
     font-size: 80px;
     text-align: left;
     
-    margin-top: 130px;
+    margin-top: 110px;
     margin-left: 40px;
     margin-bottom: 0px;
     word-break: break-all;
@@ -127,13 +127,15 @@
     margin-top: 75px;
     align: center;
     border-radius: 60%;
+
+   
   }
 
  
   #image-container{
     background-color: rgb(255,253,251);
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("landing-1.png");; */
-    background-image: url("landing-1.png");
+    background-image: url("./landing page/landing-1.png");
     height: 300px;
     max-width: 100%;
 
@@ -181,7 +183,7 @@
 
 
     padding: 10px 25px;
-    color: black;
+    color:  rgba(218,206,199);
     background-color: rgb(139,106,89);
 
     font-size: 40px;
@@ -242,7 +244,7 @@
 
   #body2-img{
     background-color: rgb(255,253,251);
-
+    
     position: relative;
 
     width: fit-content;  
@@ -273,7 +275,7 @@
 
   #body3-container{
     background-color: rgb(255,253,251);
-    height: 500px;
+    height: 400px;
 
     margin-top: 80px;
     justify-content: center;
@@ -294,10 +296,10 @@
 
   #column {
     float: left;
-    background-color: rgb(255,253,251);
+    background-color: transparent;
     width: 31.96%;
     padding: 10px;
-    height: 500px;
+    height: 400px;
    
   }
 
@@ -307,6 +309,7 @@
 
   #column > h2{
     padding-left: 60px;
+    font-size: 60px;
   }
 
 p{

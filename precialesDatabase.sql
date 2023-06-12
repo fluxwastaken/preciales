@@ -21,7 +21,6 @@ INSERT INTO userdatabase.sellers(seller_name,seller_email,seller_password)
 VALUES('Frank Ocean','focean@example.com','password123')
 
 CREATE TABLE userdatabase.products(
-seller_id INT NOT NULL UNIQUE REFERENCES userdatabase.sellers(seller_id),
 product_id SERIAL NOT NULL UNIQUE PRIMARY KEY,
 product_name TEXT NOT NULL,
 category TEXT NOT NULL,
@@ -31,13 +30,20 @@ description TEXT DEFAULT 'n/a',
 picture VARCHAR
 )
 
+INSERT INTO userdatabase.products
+VALUES(1,'SERUM','Skincare Product',10,349.00,'test', '/images/1.jpg')
+
+
 CREATE TABLE userdatabase.carts(
+cart_id SERIAL NOT NULL PRIMARY KEY,
 buyer_id INT NOT NULL REFERENCES userdatabase.buyers(buyer_id),
 product_id INT NOT NULL REFERENCES userdatabase.products(product_id),
 quantity INT NOT NULL
 )
 
 INSERT INTO userdatabase.carts
-VALUES(18,8,5)
+VALUES(1,1,1,5)
 
 SELECT * FROM userdatabase.carts
+
+SELECT * FROM userdatabase.products
