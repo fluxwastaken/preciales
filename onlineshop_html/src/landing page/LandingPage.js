@@ -1,8 +1,12 @@
 import './LandingPage.css';
-
-
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 function LandingPage(){
-
+    const navigate = useNavigate();
+    
+const handleShopClick = () =>{
+    navigate('/loginUser')
+}
 return(
 
     <div class="main-container">
@@ -19,7 +23,7 @@ return(
     {/* <!-- <img id="lp-1" src="landing-1.png" width="100%"> --> */}
     <div id="lp-1">
         <div id="btn-lp-1">
-            <button>Shop Now</button>
+            <button onClick={handleShopClick}>Shop Now</button>
         </div>
     
     </div>

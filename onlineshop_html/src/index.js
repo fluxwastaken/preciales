@@ -13,14 +13,14 @@ import LoginBuyer from './LoginBuyer';
 import BuyersPage from './BuyersPage';
 import SellersStock from './SellersStock';
 import CartPage from './CartPage';
-
+import LandingPage from './landing page/LandingPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-       <Route path="/home" element= {<LoginBuyer></LoginBuyer>}></Route>
+       <Route path="/home" element= {<LandingPage></LandingPage>}></Route>
        <Route path='/buyers' element ={<Buyers></Buyers>}></Route>
        <Route path ='/newUser' element ={<Signup></Signup>}></Route>
        <Route path='/home/loginBuyer=true/:buyer_email' element = {<BuyersPage></BuyersPage>}></Route>
