@@ -6,21 +6,34 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from './components/Product';
 
-//fetch buyer details.
-
-
-
 
 function BuyersPage() {
   const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const { buyer_email } = useParams();
-
+  const [buyer, setBuyer] = useState({
+    buyer_id: '',
+    buyer_name: '',
+    buyer_email: '',
+    buyer_password: ''
+  });
   const navigate = useNavigate();
+
+
   useEffect(() => {
     getProducts();
+    getBuyerDetails();
   }, []);
 
+  const getBuyerDetails = async () =>{
+    try {
+      const response = await fetch(`http://localhost:8080/searchBuyerEmail?keyword=${buyer_email}`);
+      const buyerData = await response.json();
+      setBuyer(buyerData)
+    } catch (error) {
+      console.log(error)
+    }
+  }
   const getProducts = async () => {
     try {
       let response = await fetch('http://localhost:8080/getProducts');
@@ -51,7 +64,8 @@ function BuyersPage() {
   };
 
   const handleCartClick =()=>{
-    navigate(`http://localhost:8080/getCart/`)
+    console.log(buyer.buyer_id)
+    navigate(`/viewCart/${buyer.buyer_id}`)
   }
 
   return (
