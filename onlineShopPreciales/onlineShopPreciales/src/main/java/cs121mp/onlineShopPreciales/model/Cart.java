@@ -1,16 +1,18 @@
 package cs121mp.onlineShopPreciales.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "carts")
 public class Cart {
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cart_id")
+    @JsonProperty("cart_id")
+    Integer cartId;
+
     @Column(name = "buyer_id")
     @JsonProperty("buyer_id")
     Integer buyerId;
@@ -23,8 +25,7 @@ public class Cart {
     @JsonProperty("quantity")
     Integer productQty;
 
-    public Cart(){
-
+    public Cart() {
     }
 
     public Integer getBuyerId() {
@@ -50,5 +51,11 @@ public class Cart {
     public void setProductQty(Integer productQty) {
         this.productQty = productQty;
     }
-}
+    public Integer getCartId() {
+        return cartId;
+    }
 
+    public void setCartId(Integer cartId) {
+        this.cartId = cartId;
+    }
+}

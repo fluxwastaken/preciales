@@ -17,7 +17,7 @@ public class ProductService {
 
     public List<Product> searchProduct(String keyword) {return productRepository.findByProductNameContains(keyword);}
 
-//    public List<Product> searchCategory(String keyword) {return productRepository.findByCategoryEquals(keyword);}
+//    public List<Product> searchCategory(String keyword) {return productRepository.findByCategory(keyword);}
 
     public void deleteProduct(Integer product_id) {productRepository.deleteById(product_id);}
 }

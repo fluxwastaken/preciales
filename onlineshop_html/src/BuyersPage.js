@@ -6,9 +6,17 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from './components/Product';
 
+//fetch buyer details.
+
+
+
+
 function BuyersPage() {
   const [products, setProducts] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
+  const { buyer_email } = useParams();
 
+  const navigate = useNavigate();
   useEffect(() => {
     getProducts();
   }, []);
@@ -22,8 +30,7 @@ function BuyersPage() {
       console.error(error);
     }
   };
-  const { buyer_email } = useParams();
-  const [searchValue, setSearchValue] = useState('');
+ 
   
   const handleSearchInputChange = (event) => {
     setSearchValue(event.target.value);
@@ -42,6 +49,10 @@ function BuyersPage() {
       console.error(error)
     }
   };
+
+  const handleCartClick =()=>{
+    navigate(`http://localhost:8080/getCart/`)
+  }
 
   return (
     <div>
@@ -71,7 +82,7 @@ function BuyersPage() {
             </div>
 
             <div className="buttonContainer_right">
-              <button className="headerBtn">Shopping Cart</button>
+              <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
               {/* idk how to make this change depending on the username */}
               {/* <button className="headerBtn">username</button> */}
               <p className="username_display">{buyer_email}</p>
