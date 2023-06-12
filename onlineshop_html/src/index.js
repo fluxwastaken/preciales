@@ -9,7 +9,7 @@ import LoginBuyer from './LoginBuyer';
 import BuyersPage from './BuyersPage';
 import SellersStock from './SellersStock';
 import CartPage from './CartPage';
-import LandingPage from './landing page/LandingPage';
+import LandingPage from './LandingPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
