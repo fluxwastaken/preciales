@@ -22,7 +22,8 @@ root.render(
        <Route path="" element= {<LoginBuyer></LoginBuyer>}></Route>
        <Route path='/buyers' element ={<Buyers></Buyers>}></Route>
        <Route path ='/newUser' element ={<Signup></Signup>}></Route>
-       <Route path='/home/loginBuyer=true/:buyer_email' element = {<SellersStock></SellersStock>}></Route>
+       <Route path='/home/loginBuyer=true/:buyer_email' element = {<BuyersPage></BuyersPage>}></Route>
+       <Route path='/home/loginSeller=true/:seller_email' element = {<SellersStock></SellersStock>}></Route>
        {/* <Route path="/home" element= {<Login1></Login1>}></Route> */}
        <Route path="/loginUser" element = {<LoginBuyer></LoginBuyer>}></Route>
 

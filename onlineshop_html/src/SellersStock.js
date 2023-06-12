@@ -33,10 +33,18 @@ function SellersPage() {
     setSearchValue(event.target.value);
   };
 
-  const handleSearchSubmit = (event) => {
+  const handleSearchSubmit = async(event) => {
     event.preventDefault();
     // Perform search logic or trigger a search API request using the searchValue
     console.log('Search submitted:', searchValue);
+
+    try {
+      let response = await fetch(`http://localhost:8080/searchProduct?keyword=${searchValue}`)
+      let productsData = await response.json()
+      setProducts(productsData)
+    } catch (error) {
+      console.error(error)
+    }
   };
 
   return (

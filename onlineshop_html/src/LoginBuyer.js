@@ -24,7 +24,7 @@ const LoginBuyer = () => {
 
   useEffect(() => {
     const handleBuyerMouseOver = () => {
-      setBuyerButtonText('SIGN-UP');
+      setBuyerButtonText('LOG-IN');
     };
 
     const handleBuyerMouseOut = () => {
@@ -32,7 +32,7 @@ const LoginBuyer = () => {
     };
 
     const handleSellerMouseOver = () => {
-      setSellerButtonText('SIGN-UP');
+      setSellerButtonText('LOG-IN');
     };
 
     const handleSellerMouseOut = () => {
@@ -94,7 +94,7 @@ const LoginBuyer = () => {
         // Proceed to the next step or perform any desired action here
         navigate(`/home/loginBuyer=true/${updatedBuyer.buyer_email}`)
       } else {
-        setError('Invalid password');
+        setError('Invalid email or password');
         console.log('Invalid email/password');
       }
     } catch (error) {
@@ -121,9 +121,9 @@ const LoginBuyer = () => {
         setSeller({ ...updatedSeller, seller_id: sellerData.seller_id });
         setError('Valid');
         // Proceed to the next step or perform any desired action here
-        
+        navigate(`/home/loginSeller=true/${updatedSeller.seller_email}`)
       } else {
-        setError('Invalid password');
+        setError('Invalid email or password');
         console.log('Invalid email/password');
       }
     } catch (error) {
@@ -166,6 +166,9 @@ const LoginBuyer = () => {
                     onChange={handleChange}
                   />
                 </td>
+              </tr>
+              <tr>
+                <td className=''>{error}</td>
               </tr>
               {/* Add more <tr> elements for additional rows */}
             </tbody>
