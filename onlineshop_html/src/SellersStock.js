@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './SellersStock.css';
-import NavBar2 from './NavBar2';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,11 +13,41 @@ import Button from 'react-bootstrap/Button';
 function SellersPage() {
   const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
+  const {seller_email} = useParams();
+  const navigate = useNavigate();
+  const [newProduct, setNewProduct] = useState({
+    product_name:"",
+    category:"",
+    quantity:"",
+    price:"",
+    description:"",
+    picture:""
+  })
+  const [seller, setSeller] = useState({
+    seller_id: '',
+    seller_name: '',
+    seller_email: '',
+    seller_password: ''
+  });
+
 
   useEffect(() => {
     getProducts();
+    getSellerDetails();
   }, []);
 
+  const getSellerDetails = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/searchSellerEmail?keyword=${seller_email}`);
+      const sellerData = await response.json();
+      if (sellerData) {
+        setSeller(sellerData);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const getProducts = async () => {
     try {
       let response = await fetch('http://localhost:8080/getProducts');
@@ -28,9 +57,36 @@ function SellersPage() {
       console.error(error);
     }
   };
+  const handleChange = (e) => {
+    const target = e.target;
+    const value = target.value;
+    const controlId = target.id;
 
+    setNewProduct((prevProduct)=>({
+      ...prevProduct,
+      [controlId]: value
+    }))
+    console.log(newProduct)
+    
+  };
   const handleSearchInputChange = (event) => {
     setSearchValue(event.target.value);
+  };
+
+  const handleFileChange = (event) => {
+    event.preventDefault();
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    
+    // Assuming "filename" is the desired name for the uploaded file
+    const picturePath = `/images/${file.name}`;
+  
+    setNewProduct((prevProduct) => ({
+      ...prevProduct,
+      picture: picturePath
+    }));
+  
+    console.log(newProduct);
   };
 
   const handleSearchSubmit = async(event) => {
@@ -45,6 +101,45 @@ function SellersPage() {
     } catch (error) {
       console.error(error)
     }
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+  
+    const formData = new FormData();
+    formData.append('image', selectedFile);
+  
+    try {
+      const response = await fetch('http://localhost:8080/uploadImage', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      if (response.ok) {
+        console.log('File uploaded successfully');
+        // Perform any additional actions here, such as updating the database with the image link
+      } else {
+        console.error('File upload failed');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+
+    fetch('http://localhost:8080/addProduct', {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(newProduct)
+    })
+      .then(response => {
+        console.log("Valid Add product")
+        navigate(`/home/loginSeller=true/${seller_email}`);
+      })
+      .catch(error => {
+        console.log("Error Adding Product")
+      });
   };
 
   return (
@@ -80,7 +175,7 @@ function SellersPage() {
               <button className="headerBtn">Stocks</button>
               {/* idk how to make this change depending on the username */}
               {/* <button className="headerBtn">username</button> */}
-              <p className="username_display">username</p>
+              <p className="username_display">{seller.seller_name}</p>
             </div>
           </div>
         </div>
@@ -117,29 +212,33 @@ function SellersPage() {
                 <Form>
                   <Form.Group className = "titleProd" controlId="productId">
                     <Form.Label>Product ID</Form.Label>
-                    <Form.Control type="text" placeholder="Enter product ID" />
+                    <Form.Control type="text" placeholder="Enter product ID" onChange={handleChange}/>
                   </Form.Group>
-                  <Form.Group className = "titleProd" controlId="productName">
+                  <Form.Group className = "titleProd" controlId="product_name"  >
                     <Form.Label>Product Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter product name" />
+                    <Form.Control type="text" placeholder="Enter product name" onChange={handleChange}/>
                   </Form.Group>
                   <Form.Group className = "titleProd" controlId="price">
                     <Form.Label>Price</Form.Label>
-                    <Form.Control type="number" placeholder="Enter price" />
+                    <Form.Control type="number" placeholder="Enter price" onChange={handleChange}/>
                   </Form.Group>
                   <Form.Group className = "titleProd" controlId="category">
                     <Form.Label>Category</Form.Label>
-                    <Form.Control type="text" placeholder="Enter category" />
+                    <Form.Control type="text" placeholder="Enter category" onChange={handleChange} />
                   </Form.Group>
                   <Form.Group className = "titleProd" controlId="quantity">
                     <Form.Label>Quantity</Form.Label>
-                    <Form.Control type="number" placeholder="Enter quantity" />
+                    <Form.Control type="number" placeholder="Enter quantity" onChange={handleChange} />
                   </Form.Group>
                   <Form.Group className = "titleProd"controlId="description">
                     <Form.Label>Description</Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="Enter description" />
+                    <Form.Control as="textarea" rows={3} placeholder="Enter description" onChange={handleChange}/>
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Form.Group className='titleProd' controlId="picture">
+                   <Form.Label>Image</Form.Label>
+                   <Form.Control type='file' label="Choose file" onChange={handleFileChange} />
+                  </Form.Group>
+                  <Button variant="primary" type="submit" onClick={handleFormSubmit}>
                     Add
                   </Button>
                 </Form>
