@@ -15,10 +15,14 @@ import Table from 'react-bootstrap/Table';
 function SellersSales() {
   const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
-
+  const [sales, setSales] = useState([]);
   useEffect(() => {
     getProducts();
+    getSales();
   }, []);
+  useEffect(() => {
+    console.log(sales);
+  }, [sales]);
 
   const getProducts = async () => {
     try {
@@ -47,17 +51,12 @@ function SellersSales() {
       console.error(error)
     }
   };
-
-  const [sales, setSales] = useState([]);
-
-  useEffect(() => {
-    getSales();
-  }, []);
-
+  
   const getSales = async () => {
     try {
       let response = await fetch('http://localhost:8080/getSales');
       let salesData = await response.json();
+      console.log(salesData);
       setSales(salesData);
     } catch (error) {
       console.error(error);
@@ -109,21 +108,21 @@ function SellersSales() {
           <Table striped bordered>
             <thead>
               <tr>
-                <th scope="col">USERNAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">ITEMS</th>
                 <th scope="col">QUANTITY</th>
-                <th scope="col">PRICE</th>
-                <th scope="col">PRODUCT</th>
-                <th scope="col">TOTAL</th>
+                <th scope="col">TOTAL PRICE</th>
+                <th scope="col">DATE PURCHASED</th>
               </tr>
             </thead>
             <tbody>
-              {sales.map((sale) => (
-                <tr key={sale.id}>
-                  <td>{sale.username}</td>
-                  <td>{sale.quantity}</td>
-                  <td>{sale.price}</td>
-                  <td>{sale.productName}</td>
-                  <td>{sale.total}</td>
+            {sales.map((sale) => (
+                <tr key={sale.transaction_id}>
+                  <td>{sale.buyer_email}</td>
+                  <td>{sale.items}</td>
+                  <td>{sale.sale_quantity}</td>
+                  <td>{sale.sale_price}</td>
+                  <td>{sale.date_purchased}</td>
                 </tr>
               ))}
             </tbody>

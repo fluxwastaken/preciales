@@ -64,6 +64,7 @@ function CartPage() {
     } catch (error) {
       console.error(error)
     }
+    setSearchValue('')
   };
 
   const handleCartClick = () => {

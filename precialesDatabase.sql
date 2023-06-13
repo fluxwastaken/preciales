@@ -44,6 +44,16 @@ price DOUBLE PRECISION NOT NULL,
 picture VARCHAR
 )
 
+CREATE TABLE userdatabase.sales(
+transaction_id SERIAL NOT NULL PRIMARY KEY,
+buyer_id INT NOT NULL REFERENCES userdatabase.buyers(buyer_id),
+buyer_email TEXT NOT NULL UNIQUE,
+items TEXT NOT NULL,
+sale_quantity INT NOT NULL,
+sale_price DOUBLE PRECISION NOT NULL,
+date_purchased DATE
+)
+
 INSERT INTO userdatabase.carts
 VALUES(1,1,1,5)
 

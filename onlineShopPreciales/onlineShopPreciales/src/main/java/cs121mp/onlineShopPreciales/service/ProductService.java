@@ -16,7 +16,7 @@ public class ProductService {
 
     public void addProduct(Product product) {productRepository.save(product);}
 
-    public List<Product> searchProduct(String keyword) {return productRepository.findByProductNameContains(keyword);}
+    public List<Product> searchProduct(String keyword) {return productRepository.findByProductNameContainsIgnoreCase(keyword);}
 
 //    public List<Product> searchCategory(String keyword) {return productRepository.findByCategory(keyword);}
 

@@ -101,6 +101,7 @@ function SellersPage() {
     } catch (error) {
       console.error(error)
     }
+    setSearchValue('')
   };
 
   const handleFormSubmit = async (event) => {

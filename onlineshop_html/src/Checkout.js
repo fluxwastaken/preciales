@@ -62,4 +62,4 @@ function Checkout(){
     );
 }
 
-export default Checkout.js
+export default Checkout;
