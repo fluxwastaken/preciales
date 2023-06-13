@@ -28,15 +28,15 @@ function Product(props) {
 
   return (
     <div className="product-container">
-      <Card className="product-card">
+      <Card className="product-card-stock">
         <Card.Img src={product.picture} alt={product.product_name} className='product-card-image' />
         <Card.Body>
           <div className = "stockContext">
           <Card.Title className="product-card-title">{product.product_name}</Card.Title>
           <Card.Text className="product-card-text qty">Quantity: {product.quantity}</Card.Text>
-          <Card.Text className="product-card-text">Price: PHP {product.price}</Card.Text>
-          <Card.Text className="product-card-text">Category: {product.category}</Card.Text>
-          <Card.Text className="product-card-text">Description: {product.description}</Card.Text>
+          <Card.Text className="product-card-text php">PHP {product.price}</Card.Text>
+          <Card.Text className="product-card-text cat">Category: {product.category}</Card.Text>
+          <Card.Text className="product-card-text descript">{product.description}</Card.Text>
           </div>
           
           <div className="stock-input-container">
@@ -47,9 +47,9 @@ function Product(props) {
               className="stock-input"
               placeholder="Quantity"
             /> */}
-            <Button className="add-stock-button" onClick={handleAddStock}>Edit Stock</Button>
+            <Button className="edit-stock-button1" onClick={handleAddStock}>Edit Product</Button>
+            <Button className="product-card-delete" onClick={handleAddToCart}>{buttonText}</Button>
           </div>
-          <Button className="product-card-button" onClick={handleAddToCart}>{buttonText}</Button>
         </Card.Body>
       </Card>
     </div>

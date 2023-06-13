@@ -82,14 +82,6 @@ function CartItem(props) {
         
 
           <div className="stock-input-container">
-            {/* <input
-              type="number"
-              value={stockValue}
-              onChange={handleStockChange}
-              className="stock-input"
-              placeholder="Quantity"
-            />
-            <Button className="add-stock-button" onClick={handleAddStock}>Add QTY</Button> */}
             <Button className="add-stock-button" onClick={handleDecreaseStock}>-</Button>
             <input 
             type="text"

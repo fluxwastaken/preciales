@@ -23,21 +23,27 @@
 
 
   .product-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap to new rows */
+    flex-wrap: wrap; Allow items to wrap to new rows */
+    position: relative;
+    height: 100%;
   }
 
-    .product-card {
+    .product-card-stock {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px; /* Adjust the width as needed */
-    height: 610px; /* Adjust the height as needed */
+    height: 650px; /* Adjust the height as needed */
     margin: 3px;
     background-color: #f6e2d9;  
+    /* height: 100%;
+    display: flex;
+    flex-direction: column; */
+    position: relative;
   }
   
   .product-card-title {
@@ -53,6 +59,11 @@
     font-family: 'Articulat-Normal';
   }
 
+  .product-card-text.php{
+    margin-bottom:0px;
+    font-size: 18px;
+  }
+
   .product-card-text.qty {
     color: #888;
     margin-bottom: 10px;
@@ -60,8 +71,18 @@
     font-size: 20px;
     font-family: 'Articulat-Bold';
   }
+
+  .product-card-text.cat{
+    font-size: 18px;
+    margin-top:0px;
+  }
+
+  .product-card-text.descript {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
   
-  .product-card-button {
+  .product-card-delete {
     background-color: #be9684;
     color: #fff;
     border: none;
@@ -69,16 +90,17 @@
     padding: 10px 20px;
     text-decoration: none;
     font-family: 'Articulat-Bold';
-    width: 100%;
+    width: 225px;
     margin-top: 10px;
+    order:2;
   }
   
-  .product-card-button:hover {
+  .product-card-delete:hover {
     background-color: #8B6A59;
     color: #fff;
   }
 
-  .product-card-button:active {
+  .product-card-delete:active {
     background-color: #8B6A59;
     color: #fff;
     outline: none;
@@ -90,8 +112,26 @@
     height: 40px;
     margin-top: 30px;
   }
+
+  .stockContext {
+    flex-grow: 1;
+  }
+
+  .stock-input-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */ 
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
   
-  .add-stock-button {
+  .edit-stock-button1 {
     background-color: #be9684;
     color: #fff;
     /* height: 30px; */
@@ -100,16 +140,18 @@
     padding: 10px 20px;
     text-decoration: none;
     font-family: 'Articulat-Bold';
-    margin-left: 8px;
+    width:225px;
+    /* margin-left: 8px; */
+    order: 1;
   }
 
-  .add-stock-button:hover {
+  .edit-stock-button:hover {
     background-color: #8B6A59;
     color: #fff;
     outline: none;
   }
 
-  .add-stock-button:active {
+  .edit-stock-button:active {
     background-color: #8B6A59;
     color: #fff;
     outline: none;

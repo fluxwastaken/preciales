@@ -89,11 +89,12 @@
     right: 20px; /* Adjust this value as needed */
   }
   
-  .username_display {
-    margin: 20px; /* Add this line to set equal margin from top and bottom */
+  .usernameDisplay {
+    margin: 20px;
     padding: 0;
-    font-size: 20px;
-    font-family: 'Articulat-Bold';
+    font-size:30px;
+    font-family: 'Articulat-Bold'; 
+    color: white;
   }
   
   .products:hover {
@@ -119,6 +120,7 @@
     align-items: center;
     justify-content: center;
     flex-grow: 1;
+
   }
   
   .searchInputContainer {
@@ -179,9 +181,66 @@
   .product-column {
     margin-top: 2.5%; /* Adjust the value as desired */
   }
+
+  .addProdForm .formRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .addProdForm .formRow .labelField {
+    width: 150px;
+    margin-right: 10px;
+  }
+
+  .label-field{
+    margin-bottom: 2px;
+    color: black;
+  }
+
+  .textField{
+    background-color:#f9efea;
+    font-family: 'Articulat-Normal';
+    margin-top: 2px;
+    margin-bottom:10px;
+  }
+
+  .textField:hover{
+    background-color:#ecd6ca;
+  }
+
+  .addproduct {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-right: 970px;
+
+    text-align: center;
+    margin: auto;
+    display: block;
+
+    background-color: #be9684;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Articulat-Bold';
+    width: 200px;
+  }
+
+  .addproduct:hover{
+    background-color: #8B6A59;
+    color: #fff;
+  }
+
+  .addproduct:active{
+    background-color: #8B6A59;
+    color: #fff;
+    outline: none;
+  }
   
   /* FOOTER */
-  .footerContainer{
+  /* .footerContainer{
     font-family: 'Georgia_Italic';
     font-size: 20px;
     background-color: #8B6A59;
@@ -192,6 +251,21 @@
     align-items: center;
     justify-content: center;
   
+  } */
+
+  #footer-container{
+    background-color: rgba(218,206,199) #8B6A59;
+    height: 100px;
+    margin-top:30px;
+  }
+
+  #footer-txt1{
+    color: #8B6A59;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Articulat-Bold';
+
+    padding-top: 20px;
   }
 
   .tabContainer {

@@ -28,16 +28,24 @@
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap to new rows */
   }
-
-    .product-card {
+  
+  .product-card {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px; /* Adjust the width as needed */
-    height: 550px; /* Adjust the height as needed */
+    height: 590px; /* Adjust the height as needed */
     margin: 3px;
-    background-color: #f6e2d9;  
+    background-color: #f8e9e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .stockContext {
+    flex: 1;
+    margin:-15px;
   }
   
   .product-card-title {
@@ -48,15 +56,13 @@
   }
   
   .product-card-text {
-    color: #3d3d3d;
+    color: #888;
     margin-bottom: 10px;
     font-family: 'Articulat-Normal';
   }
-
+  
   .product-card-text.qty {
-    color: #888;
-    margin-bottom: 10px;
-    margin-top: 0px;
+    margin-top: -12px;
     font-size: 20px;
     font-family: 'Articulat-Bold';
   }
@@ -70,52 +76,57 @@
     text-decoration: none;
     font-family: 'Articulat-Bold';
     width: 100%;
-    margin-top: 10px;
+    margin-top: auto;
   }
   
   .product-card-button:hover {
-    background-color: #8B6A59;
+    background-color: #8b6a59;
     color: #fff;
   }
-
+  
   .product-card-button:active {
-    background-color: #8B6A59;
+    background-color: #8b6a59;
     color: #fff;
     outline: none;
   }
-
+  
   .stock-input {
     font-family: 'Articulat-Normal';
     width: 100px; /* Adjust the width as needed */
     height: 40px;
     margin-top: 30px;
     width: 122px;
-    margin-left:4px;
-    margin-right:5px;
+    margin-left: 4px;
+    margin-right: 5px;
     text-align: center;
   }
-  
+
+  .stock-input-container {
+    display: flex;
+    align-items: center;
+  }
   
   .add-stock-button {
     background-color: #be9684;
     color: #fff;
-    /* height: 30px; */
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     text-decoration: none;
     font-family: 'Articulat-Bold';
     margin-left: -1px;
+    flex:1;
   }
-
+  
   .add-stock-button:hover {
-    background-color: #8B6A59;
+    background-color: #8b6a59;
     color: #fff;
     outline: none;
   }
-
+  
   .add-stock-button:active {
-    background-color: #8B6A59;
+    background-color: #8b6a59;
     color: #fff;
     outline: none;
   }
+  

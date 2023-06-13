@@ -142,6 +142,10 @@ function SellersPage() {
       });
   };
 
+  const handleLogoutClick=()=>{
+    navigate('/home')
+  }
+
   return (
     <div>
 
@@ -149,9 +153,9 @@ function SellersPage() {
         <div className="navbar">
           <div className="headerContent">
             <p className="headerTitle">preciales</p>
-            <div className="buttonContainer_left">
+            {/* <div className="buttonContainer_left">
               <button className="products">Products</button>
-            </div>
+            </div> */}
 
             <div className="searchBarContainer">
               <form onSubmit={handleSearchSubmit}>
@@ -173,9 +177,8 @@ function SellersPage() {
             <div className="buttonContainer_right">
               <button className="headerBtn">Sales</button>
               <button className="headerBtn">Stocks</button>
-              {/* idk how to make this change depending on the username */}
-              {/* <button className="headerBtn">username</button> */}
-              <p className="username_display">{seller.seller_name}</p>
+              <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
+              <p className="usernameDisplay">{seller.seller_name}</p>
             </div>
           </div>
         </div>
@@ -208,50 +211,63 @@ function SellersPage() {
           <Tab.Pane eventKey="addProd">
             <div id="addProdDiv">
               <h1 className="categoryTitle">Add Product</h1>
-              <div className = "addProdForm">
-                <Form>
-                  <Form.Group className = "titleProd" controlId="productId">
-                    <Form.Label>Product ID</Form.Label>
-                    <Form.Control type="text" placeholder="Enter product ID" onChange={handleChange}/>
-                  </Form.Group>
-                  <Form.Group className = "titleProd" controlId="product_name"  >
-                    <Form.Label>Product Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter product name" onChange={handleChange}/>
-                  </Form.Group>
-                  <Form.Group className = "titleProd" controlId="price">
-                    <Form.Label>Price</Form.Label>
-                    <Form.Control type="number" placeholder="Enter price" onChange={handleChange}/>
-                  </Form.Group>
-                  <Form.Group className = "titleProd" controlId="category">
-                    <Form.Label>Category</Form.Label>
-                    <Form.Control type="text" placeholder="Enter category" onChange={handleChange} />
-                  </Form.Group>
-                  <Form.Group className = "titleProd" controlId="quantity">
-                    <Form.Label>Quantity</Form.Label>
-                    <Form.Control type="number" placeholder="Enter quantity" onChange={handleChange} />
-                  </Form.Group>
-                  <Form.Group className = "titleProd"controlId="description">
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="Enter description" onChange={handleChange}/>
-                  </Form.Group>
-                  <Form.Group className='titleProd' controlId="picture">
-                   <Form.Label>Image</Form.Label>
-                   <Form.Control type='file' label="Choose file" onChange={handleFileChange} />
-                  </Form.Group>
-                  <Button variant="primary" type="submit" onClick={handleFormSubmit}>
-                    Add
-                  </Button>
-                </Form>
-              </div>
+              <div className="addProdForm">
+        <Form>
+          <Form.Group className="titleProd" controlId="product_name">
+            <div className="formRow">
+              <Form.Label className="labelField">Product Name</Form.Label>
+              <Form.Control className="textField" type="text" placeholder="Enter product name" onChange={handleChange} />
+            </div>
+          </Form.Group>
+          <Form.Group className="titleProd" controlId="price">
+            <div className="formRow">
+              <Form.Label className="labelField">Price</Form.Label>
+              <Form.Control className="textField" type="number" placeholder="Enter price" onChange={handleChange} />
+            </div>
+          </Form.Group>
+          <Form.Group className="titleProd" controlId="category">
+            <div className="formRow">
+              <Form.Label className="labelField">Category</Form.Label>
+              <Form.Control className="textField" type="text" placeholder="Enter category" onChange={handleChange} />
+            </div>
+          </Form.Group>
+          <Form.Group className="titleProd" controlId="quantity">
+            <div className="formRow">
+              <Form.Label className="labelField">Quantity</Form.Label>
+              <Form.Control className="textField" type="number" placeholder="Enter quantity" onChange={handleChange} />
+            </div>
+          </Form.Group>
+          <Form.Group className="titleProd" controlId="description">
+            <div className="formRow">
+              <Form.Label className="labelField">Description</Form.Label>
+              <Form.Control className="textField" as="textarea" rows={3} placeholder="Enter description" onChange={handleChange} />
+            </div>
+          </Form.Group>
+          <Form.Group className="titleProd" controlId="picture">
+            <div className="formRow">
+              <Form.Label className="labelField">Image</Form.Label>
+              <Form.Control className="textField" type="file" label="Choose file" onChange={handleFileChange} />
+            </div>
+          </Form.Group>
+          <Button className="addproduct" variant="primary" type="submit" onClick={handleFormSubmit}>
+            Add Product
+          </Button>
+        </Form>
+      </div>
             </div>
           </Tab.Pane>
         </Tab.Content>
       </Tab.Container>
       </div>
       <footer>
-        <div className = "footerContainer">
+        {/* <div className = "footerContainer">
           <p>All rights reserved.</p>
-        </div>
+        </div> */}
+        <div id="footer-container">
+              <p id="footer-txt1">
+                Copyright © 2023 Preciales Store All rights reserved
+              </p>
+              </div>
       </footer>
 
     </div>
