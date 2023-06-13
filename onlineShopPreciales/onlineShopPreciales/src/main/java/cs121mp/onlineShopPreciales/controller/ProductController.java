@@ -1,5 +1,6 @@
 package cs121mp.onlineShopPreciales.controller;
 
+import cs121mp.onlineShopPreciales.model.Buyer;
 import cs121mp.onlineShopPreciales.model.Product;
 import cs121mp.onlineShopPreciales.service.ProductService;
 import org.apache.coyote.Response;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin
 @RestController
@@ -45,5 +47,9 @@ public class ProductController {
         return ResponseEntity.ok(null);
     }
 
+    @GetMapping("/getProductInfo/{product_id}")
+    public ResponseEntity<Optional<Product>> getInfo(@PathVariable String product_id){
+        return ResponseEntity.ok(ProductService.getProductInfo(Integer.valueOf(product_id)));
+    }
 
 }

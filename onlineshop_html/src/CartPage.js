@@ -8,9 +8,20 @@ import Product from './components/Product';
 function CartPage() {
   const [carts, setCarts] = useState([]);
   const { buyer_id } = useParams();
+  //for search holds all products
+  const [products, setProducts] = useState([]);
+  const [searchValue, setSearchValue] = useState('');
+  const [buyer, setBuyer] = useState({
+    buyer_id: '',
+    buyer_name: '',
+    buyer_email: '',
+    buyer_password: ''
+  });
+  const navigate = useNavigate();
 
   useEffect(() => {
     getCartItems();
+    getProducts();
   }, []);
 
   const getCartItems = async () => {
@@ -23,17 +34,21 @@ function CartPage() {
     }
   };
 
-  const [products, setProducts] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
-  const { buyer_email } = useParams();
-  const [buyer, setBuyer] = useState({
-    buyer_id: '',
-    buyer_name: '',
-    buyer_email: '',
-    buyer_password: ''
-  });
-  const navigate = useNavigate();
-
+  // const displayMatchingProduct = () => {
+  //   const matchingProducts = [];
+  
+  //   carts.forEach((cart) => {
+  //     const product = products.find((product) => cart.product_id === product.product_id);
+  //     if (product) {
+  //       matchingProducts.push({
+  //         ...product,
+  //         quantity: cart.quantity,
+  //       });
+  //     }
+  //   });
+  
+  //   setProductsInCart(matchingProducts);
+  // };
 
   useEffect(() => {
     getProducts();
@@ -51,6 +66,17 @@ function CartPage() {
       console.log(error);
     }
   };
+  // const getProductDetails = async () => {
+  //   try {
+  //     const response = await fetch(`http://localhost:8080/geProductInfo/${carts.cart.product_id}`);
+  //     const productData = await response.json();
+  //     if (productData) {
+  //       setProduct(productData);
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const getProducts = async () => {
     try {
@@ -140,11 +166,11 @@ function CartPage() {
 
       <h1>Cart Items</h1>
       <Row>
-        {carts.map((cart) => (
+        {carts.map((cart)=>(
           <Col key={cart.product_id}>
             <div>Buyer ID: {cart.buyer_id}</div>
             <div>Product ID: {cart.product_id}</div>
-            <div>Quantity: {cart.quantity}</div>
+            <div>Quantity in Cart: {cart.quantity}</div>
           </Col>
         ))}
       </Row>
