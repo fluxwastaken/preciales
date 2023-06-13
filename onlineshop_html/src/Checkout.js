@@ -42,28 +42,30 @@ function Checkout(){
     } catch (error) {
       console.log(error);
     }
+
+    
   };
 
 
     return(
       
-<div class="main-container">
+<div class="mainco-container">
 
-<div id="header-container"> 
+<div id="headerco-container"> 
 <NavBar1 />
 </div>
 
-<div id="body1-container"> 
-<Table striped bordered>
+<div id="body1co-container"> 
+<Table striped bordered >
             <thead>
               <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
+                <th id="title-table" scope="col">Product</th>
+                <th  id="title-table"scope="col">Price</th>
+                <th  id="title-table" scope="col">Quantity</th>
+                <th  id="title-table" scope="col">Total</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="body-table">
             {carts.map((cart) => (
                 <tr key={cart.cart_id}>
                   <td>{cart.product_name}</td>
@@ -74,49 +76,25 @@ function Checkout(){
               ))}
             </tbody>
           </Table>
-{/* <MDBTable>
-      <MDBTableHead>
-        <tr>
-          <th scope='col'>Product</th>
-          <th scope='col'>Price</th>
-          <th scope='col'>Quantity</th>
-          <th scope='col'T>Total</th>
-        </tr>
-      </MDBTableHead>
-      <MDBTableBody>
-        <tr>
-          <th scope='row'>1</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope='row'>2</th>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope='row'>3</th>
-          <td></td>
-          <td></td>
-        </tr>
-      </MDBTableBody>
-    </MDBTable> */}
+          <div id="co-1">
+            <button>Checkout</button>
+            </div>
  
 </div>
 
 <div id='body2-container'>
-<div id="btn-co-1">
-            <button>Checkout</button>
             <label>Total:</label>
             <label>placeholder</label>
             <label>PHP</label>
-          </div>
+
 
 </div>
 
-
+<div id="footer-container">
+              <p id="footer-txt1">
+                Copyright © 2023 Preciales Store All rights reserved
+              </p>
+              </div>
 </div>
     );
 }
