@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import landing2Image from './landing page/landing-2.png';
 import landing4Image from './landing page/landing-4.png';
-import NavBar1 from './NavBar1';
+import NavBar1 from './components/NavBar1';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -53,7 +53,7 @@ function LandingPage() {
       <div id="image-container">
         <div id="lp-1">
           <div id="btn-lp-1">
-            <button onClick={handleShopClick}>Shop Now</button>
+            <button onClick={handleShopClick}>shop now</button>
           </div>
         </div>
       </div>
@@ -63,23 +63,25 @@ function LandingPage() {
           <img id="lp-2" src={landing2Image} height="400" width="400" alt="Landing 2" />
         </div>
         <div id="body1-txt">
-          <p id="body1-txt1"> Lorem ipsum</p>
+          <p id="body1-txt1">hello, beautiful.</p>
           <p id="body1-txt2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Welcome to your one-stop shop for freshness and wellness.
             <br />
-            <br />
+            {/* <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
+            <br /> */}
             <br />
+            Preciales gives you the power to radiate with just a few clicks. We at Preciales 
             <br />
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            provide products from both local and international merchants, giving all of you
             <br />
-            Ut enim ad minim veniam, quis nostrud exercitation
+            the best options your beauty needs to stay fresh and glowing.
           </p>
         </div>
       </div>
       <div className="body2-container">
         <div id="brownsqr-container">
-          <div id="brownsqr"></div>
+          <div id="brownsqr"><p id="textBrownSqr">keeping the glow real</p></div>
         </div>
         <div id="body2-img">
           <img src={landing4Image} height="400" width="400" alt="Landing 4" />
@@ -91,12 +93,14 @@ function LandingPage() {
           <p>Your one-stop shop for freshness and wellness.</p>
         </div>
         <div id="column"  ref={scrollRef2}>
-          <h2>Lorem</h2>
+          <h2>About Us</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Preciales is an online store created for everyone to
+            <br />
+            be able to have quick and easy access to the best items the community has to offer.
             <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            The goal of Preciales is to empower everyone to feel confident in their own skin, and to keep their glow radiating.
           </p>
         </div>
         <div id="column"  ref={scrollRef3}>

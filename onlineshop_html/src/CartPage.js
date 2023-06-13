@@ -3,9 +3,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import './CartPage.css';
-import Product from './components/Product';
+import CartItem from './components/CartItem';
 
 function CartPage() {
+
   const [carts, setCarts] = useState([]);
   const { buyer_id } = useParams();
 
@@ -142,9 +143,10 @@ function CartPage() {
       <Row>
         {carts.map((cart) => (
           <Col key={cart.product_id}>
-            <div>Buyer ID: {cart.buyer_id}</div>
+            {/* <div>Buyer ID: {cart.buyer_id}</div>
             <div>Product ID: {cart.product_id}</div>
-            <div>Quantity: {cart.quantity}</div>
+            <div>Quantity: {cart.quantity}</div> */}
+            <CartItem cart = {cart}></CartItem>
           </Col>
         ))}
       </Row>
