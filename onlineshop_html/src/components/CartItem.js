@@ -8,22 +8,64 @@ function CartItem(props) {
   const [buttonText, setButtonText] = useState('Delete from Cart');
   const [stockValue, setStockValue] = useState('');
 
-  const handleAddToCart = () => {
+  const handleDeleteFromCart = async () => {
     setButtonText('Deleted');
 
     setTimeout(() => {
       setButtonText('Delete from Cart');
     }, 400); // Revert to 'Delete Product' after 2 seconds (adjust the delay as needed)
+
+    await fetch(`http://localhost:8080/deleteCart/${cart.cart_id}`)
+    window.location.reload()
   };
 
   const handleStockChange = (event) => {
     setStockValue(event.target.value);
   };
 
-  const handleAddStock = () => {
-    console.log('Stock added:', stockValue);
+  const handleAddStock = async () => {
+    console.log('Stock added:', stockValue * 1);
+    // Make the API call or perform any other desired action
+    try {
+      await fetch(`http://localhost:8080/updateCart?buyer_id=${cart.buyer_id}&product_id=${cart.product_id}&quantity=${cart.quantity + (stockValue * 1)}`,{
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "PUT"
+      })
+      
+    } catch (error) {
+      console.error(error)
+    }
+    window.location.reload()
     setStockValue(''); // Clear the input field after adding stock
   };
+
+  const handleDecreaseStock = async() => {
+    console.log('Stock decreased:', stockValue * -1);
+    if (cart.quantity +(stockValue * -1) <= 0) {
+      await fetch(`http://localhost:8080/deleteCart/${cart.cart_id}`)
+      window.location.reload()
+    } else {
+       // Make the API call or perform any other desired action
+     try {
+      await fetch(`http://localhost:8080/updateCart?buyer_id=${cart.buyer_id}&product_id=${cart.product_id}&quantity=${cart.quantity + (stockValue * -1)}`,{
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "PUT"
+      })
+      
+    } catch (error) {
+      console.error(error)
+    }
+    window.location.reload()
+    }
+    setStockValue(''); // Clear the input field after adding stock
+  };
+
 
   return (
     <div className="product-container">
@@ -48,7 +90,7 @@ function CartItem(props) {
               placeholder="Quantity"
             />
             <Button className="add-stock-button" onClick={handleAddStock}>Add QTY</Button> */}
-            <Button className="add-stock-button" onClick={handleAddStock}>-</Button>
+            <Button className="add-stock-button" onClick={handleDecreaseStock}>-</Button>
             <input 
             type="text"
             value={stockValue}
@@ -58,7 +100,7 @@ function CartItem(props) {
             <Button className="add-stock-button" onClick={handleAddStock}>+</Button>
           </div>
 
-          <Button className="product-card-button" onClick={handleAddToCart}>{buttonText}</Button>
+          <Button className="product-card-button" onClick={handleDeleteFromCart}>{buttonText}</Button>
         </Card.Body>
       </Card>
     </div>

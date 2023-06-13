@@ -17,9 +17,6 @@ public class CartService {
 
     public List<Cart> getCart(Integer buyer_id) {return cartRepository.findByBuyerId(buyer_id);}
     public Optional<Cart> getProduct(Integer buyer_id,Integer product_id){return cartRepository.findByBuyerIdAndProductId(buyer_id,product_id);}
-//    public void addOrUpdateCartItem(Cart cartItem) {
-//        cartRepository.save(cartItem);
-//    }
     public void addOrUpdateCartItem(Cart cartItem) {
         Optional<Cart> existingCartItem = cartRepository.findByBuyerIdAndProductId(cartItem.getBuyerId(), cartItem.getProductId());
         if (existingCartItem.isPresent()) {
