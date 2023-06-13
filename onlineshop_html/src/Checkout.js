@@ -8,13 +8,13 @@ function Checkout(){
 
     return(
         
-<div class="main-container">
+<div class="mainco-container">
 
-<div id="header-container"> 
+<div id="headerco-container"> 
 <NavBar1 />
 </div>
 
-<div id="body1-container"> 
+<div id="body1co-container"> 
 <MDBTable>
       <MDBTableHead>
         <tr>
@@ -47,8 +47,8 @@ function Checkout(){
  
 </div>
 
-<div id='body2-container'>
-<div id="btn-co-1">
+<div id='body2co-container'>
+<div id="co-1">
             <button>Checkout</button>
             <label>Total:</label>
             <label>placeholder</label>

@@ -1,4 +1,4 @@
-.main-container{
+.mainco-container{
   
     display: grid;
     
@@ -9,7 +9,7 @@
     overflow:auto;
 
 }  
-  .main-container >div {
+  .mainco-container >div {
     background-color: rgb(255,253,251);
     /* border: 1px solid black; */
     text-align: center;
@@ -18,12 +18,12 @@
     overflow:auto;
   }
 
-  #header-container{
+  #headerco-container{
     background-color: rgb(139,106,89);
     height: 40px;
   }
 
-  #body1-container{
+  #body1co-container{
     /* border: 1px solid black; */
     background-color: rgb(255, 255, 255);
     grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);
@@ -40,7 +40,7 @@
     
   }
 
-  #body1-container > div{
+  #body1co-container > div{
 
     /* border: 1px solid black;
     background-color: rgb(51, 200, 66);  */
@@ -54,7 +54,7 @@
 
 
 
-  #body2-container{
+  #body2co-container{
     border: 1px solid black;
     background-color: rgb(255, 255, 255);
     grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);
@@ -67,7 +67,7 @@
     height: 600px;
   }
 
-  #body2-container > div{
+  #body2co-container > div{
 
     border: 1px solid black;
     background-color: rgb(51, 200, 66);
@@ -79,12 +79,13 @@
     padding: 10px;
   }
 
-  #btn-lp-1 button {
+  #co-1 button {
     border: none;
     outline: 0;
     display: inline-block;
     height: fit-content;
     width: fit-content;
+    position: fixed;
 
     padding: 10px 25px;
     color:  rgb(255, 255, 255);
@@ -101,7 +102,7 @@
     opacity: 1; */
   }
 
-  #lp-1 button:hover {
+  #co-1 button:hover {
     background-color: rgb(93, 68, 55);
     color: white;
   }
@@ -119,25 +120,6 @@
 
     padding-top: 50px;
   }
-  
-p{
-    color: #8B6A59;
-    font-size: larger;
-
-
-}
-body{
-    color: #8B6A59;
-    font-size: larger;
-
-    font-family: Verdana, sans-serif; 
-    margin:0;
-}
-img {
-    height: 400px;
-    vertical-align: middle;
-  
-}
 
 label{
     font-family: 'Articulat-Normal';
