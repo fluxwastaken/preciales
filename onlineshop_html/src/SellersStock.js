@@ -164,7 +164,7 @@ function SellersPage() {
               <button className="products">Products</button>
             </div> */}
 
-            <div className="searchBarContainer">
+            <div className="searchBarContainerSeller">
               <form onSubmit={handleSearchSubmit}>
                 <div className="searchInputContainer">
                   <input
@@ -205,7 +205,7 @@ function SellersPage() {
         <Tab.Content>
           <Tab.Pane eventKey="productDiv">
           <div id='productDiv'>
-            <h1 className = "categoryTitle">Stocks Hub</h1>
+            <h1 className = "stockTitle">Stocks Hub</h1>
             <Row>
               {products.map((product) => (
                 <Col key={product.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">
@@ -217,43 +217,43 @@ function SellersPage() {
           </Tab.Pane>
           <Tab.Pane eventKey="addProd">
             <div id="addProdDiv">
-              <h1 className="categoryTitle">Add Product</h1>
+              <h1 className="stockTitle">Add Product</h1>
               <div className="addProdForm">
         <Form>
           <Form.Group className="titleProd" controlId="product_name">
             <div className="formRow">
-              <Form.Label className="labelField">Product Name</Form.Label>
-              <Form.Control className="textField" type="text" placeholder="Enter product name" onChange={handleChange} />
+              <Form.Label className="prodLabel">Product Name</Form.Label>
+              <Form.Control className="prodText" type="text" placeholder="Enter product name" onChange={handleChange} />
             </div>
           </Form.Group>
           <Form.Group className="titleProd" controlId="price">
             <div className="formRow">
-              <Form.Label className="labelField">Price</Form.Label>
-              <Form.Control className="textField" type="number" placeholder="Enter price" onChange={handleChange} />
+              <Form.Label className="prodLabel">Price</Form.Label>
+              <Form.Control className="prodText" type="number" placeholder="Enter price" onChange={handleChange} />
             </div>
           </Form.Group>
           <Form.Group className="titleProd" controlId="category">
             <div className="formRow">
-              <Form.Label className="labelField">Category</Form.Label>
-              <Form.Control className="textField" type="text" placeholder="Enter category" onChange={handleChange} />
+              <Form.Label className="prodLabel">Category</Form.Label>
+              <Form.Control className="prodText" type="text" placeholder="Enter category" onChange={handleChange} />
             </div>
           </Form.Group>
           <Form.Group className="titleProd" controlId="quantity">
             <div className="formRow">
-              <Form.Label className="labelField">Quantity</Form.Label>
-              <Form.Control className="textField" type="number" placeholder="Enter quantity" onChange={handleChange} />
+              <Form.Label className="prodLabel">Quantity</Form.Label>
+              <Form.Control className="prodText" type="number" placeholder="Enter quantity" onChange={handleChange} />
             </div>
           </Form.Group>
           <Form.Group className="titleProd" controlId="description">
             <div className="formRow">
-              <Form.Label className="labelField">Description</Form.Label>
-              <Form.Control className="textField" as="textarea" rows={3} placeholder="Enter description" onChange={handleChange} />
+              <Form.Label className="prodLabel">Description</Form.Label>
+              <Form.Control className="prodText" as="textarea" rows={3} placeholder="Enter description" onChange={handleChange} />
             </div>
           </Form.Group>
           <Form.Group className="titleProd" controlId="picture">
             <div className="formRow">
-              <Form.Label className="labelField">Image</Form.Label>
-              <Form.Control className="textField" type="file" label="Choose file" onChange={handleFileChange} />
+              <Form.Label className="prodLabel">Image</Form.Label>
+              <Form.Control className="prodText" type="file" label="Choose file" onChange={handleFileChange} />
             </div>
           </Form.Group>
           <Button className="addproduct" variant="primary" type="submit" onClick={handleFormSubmit}>

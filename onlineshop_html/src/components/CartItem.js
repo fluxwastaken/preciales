@@ -68,32 +68,32 @@ function CartItem(props) {
 
 
   return (
-    <div className="product-container">
-      <Card className="product-card">
-        <Card.Img src={cart.picture} alt={cart.product_name} className='product-card-image' />
+    <div className="cartitem-container">
+      <Card className="cartitem-card">
+        <Card.Img src={cart.picture} alt={cart.product_name} className='cartitem-card-image' />
         <Card.Body>
-          <div className="stockContext">
+          <div className="cartitemContext">
             {/* <Card.Title className="product-card-title">Buyer ID: {cart.buyer_id}</Card.Title>
             <Card.Text className="product-card-title">Product ID: {cart.product_id}</Card.Text> */}
-            <Card.Title className="product-card-title">{cart.product_name}</Card.Title>
-            <Card.Text className="product-card-text price">PHP {cart.price}</Card.Text>
-            <Card.Text className="product-card-text">Quantity in Cart: {cart.quantity}</Card.Text>
+            <Card.Title className="cartitem-card-title">{cart.product_name}</Card.Title>
+            <Card.Text className="cartitem-card-text price">PHP {cart.price}</Card.Text>
+            <Card.Text className="cartitem-card-text">Quantity in Cart: {cart.quantity}</Card.Text>
 
-
-            <div className="stock-input-container">
-              <div className="stock-input-wrapper">
-                <Button className="add-stock-button" onClick={handleDecreaseStock}>-</Button>
+          
+            <div className="cartitem-input-container">
+              <div className="cartitem-input-wrapper">
+                <Button className="add-cartitem-button sub" onClick={handleDecreaseStock}>-</Button>
                 <input
                   type="text"
                   value={stockValue}
                   onChange={handleStockChange}
-                  className="stock-input"
+                  className="stock-cartitem"
                   placeholder="Quantity" />
-                <Button className="add-stock-button" onClick={handleAddStock}>+</Button>
+                <Button className="add-cartitem-button add" onClick={handleAddStock}>+</Button>
               </div>
             </div>
           </div>
-          <Button className="product-card-button" onClick={handleDeleteFromCart}>{buttonText}</Button>
+          <Button className="delete-cartitem-button" onClick={handleDeleteFromCart}>{buttonText}</Button>
         </Card.Body>
       </Card>
     </div>

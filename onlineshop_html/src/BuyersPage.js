@@ -117,7 +117,7 @@ function BuyersPage() {
 
 
       <div id='productDiv'>
-        <h1 className = "categoryTitle">All Products</h1>
+        <h1 className = "productsTitle">All Products</h1>
         <Row>
           {products.map((product) => (
             <Col key={product.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">

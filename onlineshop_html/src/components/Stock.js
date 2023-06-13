@@ -27,16 +27,16 @@ function Product(props) {
   };
 
   return (
-    <div className="product-container">
+    <div className="stock-container">
       <Card className="product-card-stock">
         <Card.Img src={product.picture} alt={product.product_name} className='product-card-image' />
         <Card.Body>
           <div className = "stockContext">
-          <Card.Title className="product-card-title">{product.product_name}</Card.Title>
-          <Card.Text className="product-card-text qty">Quantity: {product.quantity}</Card.Text>
-          <Card.Text className="product-card-text php">PHP {product.price}</Card.Text>
-          <Card.Text className="product-card-text cat">Category: {product.category}</Card.Text>
-          <Card.Text className="product-card-text descript">{product.description}</Card.Text>
+          <Card.Title className="stock-card-title">{product.product_name}</Card.Title>
+          <Card.Text className="stock-card-text qty">Quantity: {product.quantity}</Card.Text>
+          <Card.Text className="stock-card-text php">PHP {product.price}</Card.Text>
+          <Card.Text className="stock-card-text cat">Category: {product.category}</Card.Text>
+          <Card.Text className="stock-card-text descript">{product.description}</Card.Text>
           </div>
           
           <div className="stock-input-container">
@@ -48,7 +48,7 @@ function Product(props) {
               placeholder="Quantity"
             /> */}
             <Button className="edit-stock-button1" onClick={handleAddStock}>Edit Product</Button>
-            <Button className="product-card-delete" onClick={handleAddToCart}>{buttonText}</Button>
+            <Button className="stock-card-delete" onClick={handleAddToCart}>{buttonText}</Button>
           </div>
         </Card.Body>
       </Card>

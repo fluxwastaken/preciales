@@ -215,7 +215,7 @@
     overflow-x: hidden;
   }
   
-  .categoryTitle{
+  .cartTitle{
     font-family: 'Georgia_Italic';
     color:#8B6A59;
     margin-left: 2.5%;
@@ -227,7 +227,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   
   .product-column {

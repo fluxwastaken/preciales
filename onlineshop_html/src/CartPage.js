@@ -121,7 +121,7 @@ function CartPage() {
 
       <div id='productDiv'>
         <div className="cartHead">
-          <h1 className="categoryTitle">Shopping Cart</h1>
+          <h1 className="cartTitle">Shopping Cart</h1>
           <Button className="checkOut" onClick={handleCheckoutClick}>Proceed to Checkout</Button>
         </div>
 

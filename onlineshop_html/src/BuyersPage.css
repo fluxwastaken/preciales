@@ -190,11 +190,12 @@ body {
   overflow-x: hidden;
 }
 
-.categoryTitle{
+.productsTitle{
   font-family: 'Georgia_Italic';
   color:#8B6A59;
   margin-left: 2.5%;
-  margin-top: 0.5%;
+  margin-top: 2.5%;
+  font-weight: bold;
 }
 
 /* FOOTER */

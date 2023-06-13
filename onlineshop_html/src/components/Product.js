@@ -43,7 +43,7 @@ function Product(props) {
 
   return (
     <div className="product-container">
-    <Card className="product-card1">
+    <Card className="product-card">
       <div className="product-card-content">
         <Card.Img src={product.picture} alt={product.product_name} className="product-card-image" />
         <Card.Title className="product-card-title">{product.product_name}</Card.Title>

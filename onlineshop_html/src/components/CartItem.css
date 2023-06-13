@@ -22,14 +22,14 @@
   }
 
 
-  .product-container {
+  .cartitem-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap to new rows */
   }
   
-  .product-card {
+  .cartitem-card {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -43,31 +43,31 @@
     justify-content: space-between;
   }
 
-  .stockContext {
+  .cartitemContext {
     flex: 1;
-    margin:-15px;
+    margin-left:-15px;
   }
   
-  .product-card-title {
+  .cartitem-card-title {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 0px;
     font-family: 'Articulat-Bold';
   }
   
-  .product-card-text {
+  .cartitem-card-text {
     color: #888;
     margin-bottom: 10px;
     font-family: 'Articulat-Normal';
   }
   
-  .product-card-text.qty {
+  .cartitem-card-text.qty {
     margin-top: -12px;
     font-size: 20px;
     font-family: 'Articulat-Bold';
   }
   
-  .product-card-button {
+  .delete-cartitem-button {
     background-color: #be9684;
     color: #fff;
     border: none;
@@ -75,22 +75,22 @@
     padding: 10px 20px;
     text-decoration: none;
     font-family: 'Articulat-Bold';
-    width: fit-content(100%);
-    margin-top: 140px;
+    width: 220px;
+    margin-top:-60px;
   }
   
-  .product-card-button:hover {
+  .delete-cartitem-button:hover {
     background-color: #8b6a59;
     color: #fff;
   }
   
-  .product-card-button:active {
+  .delete-cartitem-button:active {
     background-color: #8b6a59;
     color: #fff;
     outline: none;
   }
   
-  .stock-input {
+  .stock-cartitem {
     font-family: 'Articulat-Normal';
     width: 100px; /* Adjust the width as needed */
     height: 40px;
@@ -101,33 +101,35 @@
     text-align: center;
   }
 
-  .stock-input-container {
+  .cartitem-input-container {
     display: flex;
     align-items: center;
     margin-bottom: 60px;
   }
   
-  .add-stock-button {
+  
+  .add-cartitem-button {
     background-color: #be9684;
     color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    
-
-
     font-family: 'Articulat-Bold';
-    margin-left: -1px;
+    margin-left: 11px;
     flex:1;
   }
+
+  .add-cartitem-button.add{
+    margin-left:-1px;
+  }
   
-  .add-stock-button:hover {
+  .add-cartitem-button:hover {
     background-color: #8b6a59;
     color: #fff;
     outline: none;
   }
   
-  .add-stock-button:active {
+  .add-cartitem-button:active {
     background-color: #8b6a59;
     color: #fff;
     outline: none;

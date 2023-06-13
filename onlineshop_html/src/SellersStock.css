@@ -115,7 +115,7 @@
   }
   
   /* SEARCH BAR */
-  .searchBarContainer {
+  .searchBarContainerSeller {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,12 +170,12 @@
     overflow-x: hidden;
   }
   
-  .categoryTitle{
+  .stockTitle{
     font-family: 'Georgia_Italic';
     color:#8B6A59;
     margin-left: 2.5%;
     margin-top: 2.5%;
-    margin-bottom: 0%;
+    font-weight: bold;
   }
   
   .product-column {
@@ -188,24 +188,35 @@
     margin-bottom: 10px;
   }
   
-  .addProdForm .formRow .labelField {
+  .addProdForm .formRow .prodLabel {
     width: 150px;
     margin-right: 10px;
   }
 
-  .label-field{
-    margin-bottom: 2px;
+  .prodLabel{
+    /* margin-bottom: 2px; */
     color: black;
+    font-size: 30px;
+
+    display: inline-block;
+    width: 150px; /* Adjust the width to your desired value */
+    font-weight: bold;
+    margin-bottom: 0px;
   }
 
-  .textField{
+  .prodText{
     background-color:#f9efea;
     font-family: 'Articulat-Normal';
     margin-top: 2px;
     margin-bottom:10px;
+    font-size: 20px;
+
+    display: inline-block;
+    width: calc(100% - 160px); /* Adjust the width to your desired value */
+    margin-left: 10px;
   }
 
-  .textField:hover{
+  .prodText:hover{
     background-color:#ecd6ca;
   }
 
@@ -310,5 +321,6 @@
     font-size: 20px;
     color:#8B6A59;
     font-family: 'Articulat-Bold';
+    margin-bottom: 20px;
   }
   
