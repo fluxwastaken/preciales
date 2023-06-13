@@ -146,6 +146,12 @@ function SellersPage() {
   const handleLogoutClick=()=>{
     navigate('/home')
   }
+  const handleSalesClick=()=>{
+    navigate(`/viewSales/${seller.seller_email}`)
+  }
+  const handleStocksClick=()=>{
+    navigate(`/home/loginSeller=true/${seller.seller_email}`)
+  }
 
   return (
     <div>
@@ -176,8 +182,8 @@ function SellersPage() {
             </div>
 
             <div className="buttonContainer_right">
-              <button className="headerBtn">Sales</button>
-              <button className="headerBtn">Stocks</button>
+              <button className="headerBtn" onClick={handleSalesClick}>Sales</button>
+              <button className="headerBtn" onClick={handleStocksClick}>Stocks</button>
               <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
               <p className="usernameDisplay">{seller.seller_name}</p>
             </div>

@@ -28,8 +28,8 @@ root.render(
       <Route path="/loginUser" element = {<LoginBuyer></LoginBuyer>}></Route>
       <Route path="/viewCart/:buyer_id" element={<CartPage></CartPage>}></Route>
       <Route path="/editStock/:product_id" element={<EditStock></EditStock>}></Route>
-      <Route path="/viewSales" element={<SellersSales></SellersSales>}></Route>
-      <Route path="/checkout" element={<Checkout></Checkout>}></Route>
+      <Route path="/viewSales/:seller_email" element={<SellersSales></SellersSales>}></Route>
+      <Route path="/checkout/:buyer_id" element={<Checkout></Checkout>}></Route>
     </Routes>
   </BrowserRouter>
 );

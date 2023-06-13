@@ -79,6 +79,9 @@ function CartPage() {
   const handleProductsClick = () => {
     navigate(`/home/loginBuyer=true/${buyer.buyer_email}`)
   };
+  const handleCheckoutClick = () => {
+    navigate(`/checkout/${buyer.buyer_id}`)
+  };
 
   return (
     <div>
@@ -119,7 +122,7 @@ function CartPage() {
       <div id='productDiv'>
         <div className="cartHead">
           <h1 className="categoryTitle">Shopping Cart</h1>
-          <Button className="checkOut">Proceed to Checkout</Button>
+          <Button className="checkOut" onClick={handleCheckoutClick}>Proceed to Checkout</Button>
         </div>
 
         <Row>

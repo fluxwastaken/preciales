@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './SellersSales.css';
 import NavBar2 from './components/NavBar2';
 
@@ -16,6 +16,8 @@ function SellersSales() {
   const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [sales, setSales] = useState([]);
+  const{seller_email} = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     getProducts();
     getSales();
@@ -62,6 +64,12 @@ function SellersSales() {
       console.error(error);
     }
   };
+  const handleSalesClick=()=>{
+    navigate(`/viewSales/${seller_email}`)
+  }
+  const handleStocksClick=()=>{
+    navigate(`/home/loginSeller=true/${seller_email}`)
+  }
 
   return (
     <div>
@@ -92,8 +100,8 @@ function SellersSales() {
             </div>
 
             <div className="buttonContainer_right">
-              <button className="headerBtn">Sales</button>
-              <button className="headerBtn">Stocks</button>
+              <button className="headerBtn" onClick={handleSalesClick}>Sales</button>
+              <button className="headerBtn" onClick={handleStocksClick}>Stocks</button>
               {/* idk how to make this change depending on the username */}
               {/* <button className="headerBtn">username</button> */}
               <p className="username_display">username</p>
