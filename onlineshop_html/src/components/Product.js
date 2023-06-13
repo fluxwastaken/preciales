@@ -9,7 +9,10 @@ function Product(props) {
   const [carts, setCarts] = useState({
   buyer_id:buyer_id,
   product_id:product_id,
-  quantity:1
+  product_name:product.product_name,
+  quantity:1,
+  price:product.price,
+  picture:product.picture
   }); 
 
   const [buttonText, setButtonText] = useState('Add to Cart');

@@ -20,41 +20,22 @@ function CartPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    getBuyerDetails()
     getCartItems();
-    getProducts();
   }, []);
 
+  
   const getCartItems = async () => {
     try {
       let response = await fetch(`http://localhost:8080/getCart/${buyer_id}`);
       let cartData = await response.json();
       setCarts(cartData);
+      
     } catch (error) {
       console.error(error);
     }
   };
-
-  // const displayMatchingProduct = () => {
-  //   const matchingProducts = [];
   
-  //   carts.forEach((cart) => {
-  //     const product = products.find((product) => cart.product_id === product.product_id);
-  //     if (product) {
-  //       matchingProducts.push({
-  //         ...product,
-  //         quantity: cart.quantity,
-  //       });
-  //     }
-  //   });
-  
-  //   setProductsInCart(matchingProducts);
-  // };
-
-  useEffect(() => {
-    getProducts();
-    getBuyerDetails();
-  }, []);
-
   const getBuyerDetails = async () => {
     try {
       const response = await fetch(`http://localhost:8080/getBuyerInfo/${buyer_id}`);
@@ -66,27 +47,7 @@ function CartPage() {
       console.log(error);
     }
   };
-  // const getProductDetails = async () => {
-  //   try {
-  //     const response = await fetch(`http://localhost:8080/geProductInfo/${carts.cart.product_id}`);
-  //     const productData = await response.json();
-  //     if (productData) {
-  //       setProduct(productData);
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
-  const getProducts = async () => {
-    try {
-      let response = await fetch('http://localhost:8080/getProducts');
-      let productsData = await response.json();
-      setProducts(productsData);
-    } catch (error) {
-      console.error(error);
-    }
-  };
  
   
   const handleSearchInputChange = (event) => {
@@ -170,7 +131,10 @@ function CartPage() {
           <Col key={cart.product_id}>
             <div>Buyer ID: {cart.buyer_id}</div>
             <div>Product ID: {cart.product_id}</div>
+            <div>Product Name: {cart.product_name}</div>
             <div>Quantity in Cart: {cart.quantity}</div>
+            <div>Price: {cart.price}</div>
+            <div>Pic Link: {cart.picture}</div>
           </Col>
         ))}
       </Row>

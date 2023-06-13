@@ -38,7 +38,10 @@ CREATE TABLE userdatabase.carts(
 cart_id SERIAL NOT NULL PRIMARY KEY,
 buyer_id INT NOT NULL REFERENCES userdatabase.buyers(buyer_id),
 product_id INT NOT NULL REFERENCES userdatabase.products(product_id),
-quantity INT NOT NULL
+product_name TEXT NOT NULL,
+quantity INT NOT NULL,
+price DOUBLE PRECISION NOT NULL,
+picture VARCHAR
 )
 
 INSERT INTO userdatabase.carts
