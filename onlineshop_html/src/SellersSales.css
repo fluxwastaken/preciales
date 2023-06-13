@@ -168,13 +168,26 @@
     overflow-x: hidden;
   }
   
-  .categoryTitle{
+  .salesTitle{
     font-family: 'Georgia_Italic';
     color:#8B6A59;
     margin-left: 5%;
     margin-top: 2.5%;
     margin-bottom: 1%;
   }
+
+  #tableHead{
+    color: white;
+    text-align: center;
+    background-color: #8B6A59;
+    font-family: 'Articulat-Bold';
+  }
+
+  #tableInfo{
+    font-family: 'Articulat-Normal';
+    background-color:#f5e6de;
+  }
+  
   
   .product-column {
     margin-top: 2.5%; /* Adjust the value as desired */

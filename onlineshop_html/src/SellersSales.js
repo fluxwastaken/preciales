@@ -21,10 +21,32 @@ function SellersSales() {
   useEffect(() => {
     getProducts();
     getSales();
+    getSellerDetails();
   }, []);
+
+  const [seller, setSeller] = useState({
+    seller_id: '',
+    seller_name: '',
+    seller_email: '',
+    seller_password: ''
+  });
+
+
   useEffect(() => {
     console.log(sales);
   }, [sales]);
+
+  const getSellerDetails = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/searchSellerEmail?keyword=${seller_email}`);
+      const sellerData = await response.json();
+      if (sellerData) {
+        setSeller(sellerData);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const getProducts = async () => {
     try {
@@ -71,18 +93,23 @@ function SellersSales() {
     navigate(`/home/loginSeller=true/${seller_email}`)
   }
 
+  const handleLogoutClick=()=>{
+    navigate('/home')
+  }
+
+
   return (
     <div>
 
-      <header>
+<header>
         <div className="navbar">
           <div className="headerContent">
             <p className="headerTitle">preciales</p>
-            <div className="buttonContainer_left">
+            {/* <div className="buttonContainer_left">
               <button className="products">Products</button>
-            </div>
+            </div> */}
 
-            <div className="searchBarContainer">
+            {/* <div className="searchBarContainerSeller">
               <form onSubmit={handleSearchSubmit}>
                 <div className="searchInputContainer">
                   <input
@@ -97,40 +124,40 @@ function SellersSales() {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
 
             <div className="buttonContainer_right">
               <button className="headerBtn" onClick={handleSalesClick}>Sales</button>
               <button className="headerBtn" onClick={handleStocksClick}>Stocks</button>
-              {/* idk how to make this change depending on the username */}
-              {/* <button className="headerBtn">username</button> */}
-              <p className="username_display">username</p>
+              <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
+              <p className="usernameDisplay">{seller.seller_name}</p>
             </div>
           </div>
         </div>
       </header>
 
+
       <div className="bodyContainer">
-        <h1 className="categoryTitle">Purchases</h1>
+        <h1 className="salesTitle">Purchases</h1>
         <div className="tableContainer">
           <Table striped bordered>
             <thead>
               <tr>
-                <th scope="col">EMAIL</th>
-                <th scope="col">ITEMS</th>
-                <th scope="col">QUANTITY</th>
-                <th scope="col">TOTAL PRICE</th>
-                <th scope="col">DATE PURCHASED</th>
+                <th id ="tableHead" scope="col">EMAIL</th>
+                <th id ="tableHead" scope="col">ITEMS</th>
+                <th id ="tableHead" scope="col">QUANTITY</th>
+                <th id ="tableHead" scope="col">TOTAL PRICE</th>
+                <th id ="tableHead" scope="col">DATE PURCHASED</th>
               </tr>
             </thead>
             <tbody>
             {sales.map((sale) => (
                 <tr key={sale.transaction_id}>
-                  <td>{sale.buyer_email}</td>
-                  <td>{sale.items}</td>
-                  <td>{sale.sale_quantity}</td>
-                  <td>{sale.sale_price}</td>
-                  <td>{sale.date_purchased}</td>
+                  <td id ="tableInfo">{sale.buyer_email}</td>
+                  <td id ="tableInfo">{sale.items}</td>
+                  <td id ="tableInfo">{sale.sale_quantity}</td>
+                  <td id ="tableInfo">{sale.sale_price}</td>
+                  <td id ="tableInfo">{sale.date_purchased}</td>
                 </tr>
               ))}
             </tbody>
