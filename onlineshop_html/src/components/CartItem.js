@@ -78,9 +78,8 @@ function CartItem(props) {
             <Card.Title className="product-card-title">{cart.product_name}</Card.Title>
             <Card.Text className="product-card-text price">PHP {cart.price}</Card.Text>
             <Card.Text className="product-card-text">Quantity in Cart: {cart.quantity}</Card.Text>
-          </div>
+          
         
-
           <div className="stock-input-container">
             <Button className="add-stock-button" onClick={handleDecreaseStock}>-</Button>
             <input 
@@ -91,11 +90,12 @@ function CartItem(props) {
             placeholder="Quantity"/>
             <Button className="add-stock-button" onClick={handleAddStock}>+</Button>
           </div>
-
+          </div>
           <Button className="product-card-button" onClick={handleDeleteFromCart}>{buttonText}</Button>
         </Card.Body>
       </Card>
     </div>
+    
   );
 }
 

@@ -129,7 +129,11 @@ function CartPage() {
           ))}
         </Row>
       </div>
-
+      <div id="footer-container">
+        <p id="footer-txt1">
+          Copyright © 2023 Preciales Store All rights reserved
+        </p>
+      </div>
     </div>
   );
 }

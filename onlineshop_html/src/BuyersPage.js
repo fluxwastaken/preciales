@@ -126,11 +126,11 @@ function BuyersPage() {
         </Row>
       </div>
 
-      <footer>
-        <div className="footerContainer">
-          <p>All rights reserved.</p>
-        </div>
-      </footer>
+      <div id="footer-container">
+        <p id="footer-txt1">
+          Copyright © 2023 Preciales Store All rights reserved
+        </p>
+      </div>
 
     </div>
   );
