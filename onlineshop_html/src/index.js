@@ -10,6 +10,7 @@ import BuyersPage from './BuyersPage';
 import SellersStock from './SellersStock';
 import CartPage from './CartPage';
 import LandingPage from './LandingPage';
+import EditStock from './components/EditStock';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,7 +24,8 @@ root.render(
        <Route path='/home/loginSeller=true/:seller_email' element = {<SellersStock></SellersStock>}></Route>
        {/* <Route path="/home" element= {<Login1></Login1>}></Route> */}
        <Route path="/loginUser" element = {<LoginBuyer></LoginBuyer>}></Route>
-       <Route path="viewCart/:buyer_id" element={<CartPage></CartPage>}></Route>
+       <Route path="/viewCart/:buyer_id" element={<CartPage></CartPage>}></Route>
+       <Route path="/editStock/:product_id" element={<EditStock></EditStock>}></Route>
 
     </Routes>
   </BrowserRouter>

@@ -52,4 +52,39 @@ public class ProductController {
         return ResponseEntity.ok(ProductService.getProductInfo(Integer.valueOf(product_id)));
     }
 
+    @PatchMapping("/updateProductInfo/{product_id}")
+    public ResponseEntity<Product> updateProductInfo(@PathVariable String product_id, @RequestBody Product updatedProduct) {
+        Optional<Product> existingProduct = ProductService.getProductInfo(Integer.valueOf(product_id));
+
+        if (existingProduct.isPresent()) {
+            // Update the fields of the existing product with the values from the updatedProduct
+            Product productToUpdate = existingProduct.get();
+            if (updatedProduct.getProductName() != null) {
+                productToUpdate.setProductName(updatedProduct.getProductName());
+            }
+            if (updatedProduct.getProductCategory() != null) {
+                productToUpdate.setProductCategory(updatedProduct.getProductCategory());
+            }
+            if (updatedProduct.getProductQty() != null) {
+                productToUpdate.setProductQty(updatedProduct.getProductQty());
+            }
+            if (updatedProduct.getProductPrice() != null) {
+                productToUpdate.setProductPrice(updatedProduct.getProductPrice());
+            }
+            if (updatedProduct.getProductDescription() != null) {
+                productToUpdate.setProductDescription(updatedProduct.getProductDescription());
+            }
+            if (updatedProduct.getProductPicture() != null) {
+                productToUpdate.setProductPicture(updatedProduct.getProductPicture());
+            }
+
+            // Save the updated product in the ProductService
+            ProductService.addProduct(productToUpdate);
+
+            return ResponseEntity.ok(productToUpdate);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

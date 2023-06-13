@@ -23,6 +23,7 @@ function Product(props) {
   const handleAddStock = () => {
     console.log('Stock added:', stockValue);
     setStockValue(''); // Clear the input field after adding stock
+    window.open(`/editStock/${product.product_id}`, 'Add Stock', 'width=600,height=400');
   };
 
   return (
@@ -39,14 +40,14 @@ function Product(props) {
           </div>
           
           <div className="stock-input-container">
-            <input
+            {/* <input
               type="number"
               value={stockValue}
               onChange={handleStockChange}
               className="stock-input"
               placeholder="Quantity"
-            />
-            <Button className="add-stock-button" onClick={handleAddStock}>Add Stock</Button>
+            /> */}
+            <Button className="add-stock-button" onClick={handleAddStock}>Edit Stock</Button>
           </div>
           <Button className="product-card-button" onClick={handleAddToCart}>{buttonText}</Button>
         </Card.Body>
