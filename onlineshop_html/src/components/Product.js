@@ -43,14 +43,14 @@ function Product(props) {
 
   return (
     <div className="product-container">
-      <Card className="product-card">
+      <Card className="product-card1">
         <Card.Img src={product.picture} alt={product.product_name} className='product-card-image' />
         <Card.Body>
           <Card.Title className="product-card-title">{product.product_name}</Card.Title>
-          <Card.Text className="product-card-text price">Price: PHP {product.price}</Card.Text>
-          <Card.Text className="product-card-text">Category: {product.category}</Card.Text>
-          <Card.Text className="product-card-text">Quantity: {product.quantity}</Card.Text>
-          <Card.Text className="product-card-text">Description: {product.description}</Card.Text>
+          <Card.Text className="product-card-text price">PHP {product.price}</Card.Text>
+          <Card.Text className="product-card-text cat">Category: {product.category}</Card.Text>
+          <Card.Text className="product-card-text qty1">Quantity: {product.quantity}</Card.Text>
+          <Card.Text className="product-card-text descript">{product.description}</Card.Text>
           <Button className="product-card-button" onClick={handleAddToCart}>{buttonText}</Button>
         </Card.Body>
       </Card>

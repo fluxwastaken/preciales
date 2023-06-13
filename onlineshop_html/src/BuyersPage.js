@@ -83,15 +83,11 @@ function BuyersPage() {
       <header>
       <div className="navbar">
           <div className="headerContent">
-            <Row className="align-items-center">
-              <Col xs={3} className="headerCol">
-                <p className="headerTitle">preciales</p>
-                <div className="buttonContainer_left">
-                <button className="products"onClick={handleProductsClick}>Products</button>
+                <p className="headTitle">preciales</p>
+                <div className="buttonContainer_left1">
+                <button className="productsBtn"onClick={handleProductsClick}>Products</button>
                 </div>
-              </Col>
 
-              <Col xs={5} className="headerCol">
                 <div className="searchBarContainer">
                   <form onSubmit={handleSearchSubmit}>
                     <div className="searchInputContainer">
@@ -108,22 +104,19 @@ function BuyersPage() {
                     </div>
                   </form>
                 </div>
-                </Col>
-              <Col xs={3} className="headerCol">
                 <div className="buttonContainer_right">
                   <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
                   <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
-                  <p className="username_display">{buyer.buyer_name}</p>
-                  </div>
-              </Col>
-            </Row>
+                  <p className="usernameDisplay">{buyer.buyer_name}</p>
+                </div>
+
           </div>
         </div>
       </header>
 
 
       <div id='productDiv'>
-        <h1 className = "categoryTitle">All products</h1>
+        <h1 className = "categoryTitle">All Products</h1>
         <Row>
           {products.map((product) => (
             <Col key={product.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">

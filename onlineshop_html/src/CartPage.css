@@ -43,138 +43,165 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #644231;
   }
-  /* NAVBAR */
-  .navbar {
-    background-color: #8B6A59;
-    color: white;
-    font-size: 30px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Add this line to evenly distribute content */
-    margin: 0px;
-  }
-  
-  .headerContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .headerTitle {
-    margin: 0 ;
-    font-family: 'Articulat-Bold';
-    text-align: left;
-    padding-left: 20px;
-    color:#ffffff;
-    width: 400px;
-  }
-  
-  .buttonContainer_left {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 20px; /* Adjust this value as needed */
-    text-align: center;
-  }
-  
-  .products {
-    font-family: 'Articulat-Normal';
-    background-color: #8B6A59;
-    color: white;
-    font-size: 25px;
-    border: none;
-    padding: 10px;
-    width: 100px;
-    text-align: left;
-    margin: 20px;
-  }
-  
-  .products:hover {
-    color: #E6C7B8;
-  }
-  
-  .buttonContainer_right {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 20px; 
-    text-align: center;
-    
-  }
-  
-  .username_display {
-    margin: 20px;
-    padding: 0;
-    font-size: 50px;
-    font-family: 'Articulat-Bold'; 
-    color: white;
-  }
-  
-  
-  .headerBtn {
-    font-family: 'Articulat-Normal';
-    background-color: #8B6A59;
-    color: white;
-    font-size: 18px;
-    border: none;
-    padding: 0 10px;
-  }
-  
-  .headerBtn:hover {
-    color: #E6C7B8;
-  }
-  
-  .headerCol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* SEARCH BAR */
-  .searchBarContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    text-align: center;
-    width: 1300px;
-  }
-  
-  .searchInputContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .searchInput {
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-    width: 400px; /* Adjust this value as needed */
-    font-family: 'Articulat-Normal';
-    font-size: 18px;
-  }
-  
-  .searchButton {
-    font-family: 'Articulat-Normal';
-    margin-left: 8px;
-    padding: 8px 16px;
-    background-color: #E6C7B8;
-    color: #644231;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 40px;
-    font-size: 20px;
-  }
-  
-  .searchButton:hover {
-    background-color: #c09b88;
-    color: #ffffff;
-  }
+/* NAVBAR */
+.navbar {
+  background-color: #8B6A59;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add this line to evenly distribute content */
+  margin: 0px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headTitle {
+  margin: 0 ;
+  font-family: 'Articulat-Bold';
+  text-align: left;
+  padding-left: 20px;
+  color:#ffffff;
+  width: 400px;
+  font-size: 30px;
+}
+
+.buttonContainer_left1 {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  margin: 150px;
+}
+
+.productsBtn {
+  font-family: 'Articulat-Normal';
+  background-color: #8B6A59;
+  color: white;
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  width: 100px;
+  text-align: left;
+  margin: 20px;
+}
+
+.products:hover {
+  color: #E6C7B8;
+}
+
+.buttonContainer_right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px; 
+  text-align: center;
+}
+
+.usernameDisplay {
+  margin: 20px;
+  padding: 0;
+  font-size:30px;
+  font-family: 'Articulat-Bold'; 
+  color: white;
+}
+
+
+.headerBtn {
+  font-family: 'Articulat-Normal';
+  background-color: #8B6A59;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 0 10px;
+}
+
+.headerBtn:hover {
+  color: #E6C7B8;
+}
+
+.headerCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SEARCH BAR */
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-grow: 1; */
+  text-align: center;
+  width: 800px;
+  margin-left: -400px;
+}
+
+.searchInputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  width: 400px; /* Adjust this value as needed */
+  font-family: 'Articulat-Normal';
+  font-size: 18px;
+}
+
+.searchButton {
+  font-family: 'Articulat-Normal';
+  margin-left: 8px;
+  padding: 8px 16px;
+  background-color: #E6C7B8;
+  color: #644231;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 20px;
+}
+
+.searchButton:hover {
+  background-color: #c09b88;
+  color: #ffffff;
+}
   
   /* BODY */
+  .checkOut {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 40px;
+    margin-right: 970px;
+
+    background-color: #be9684;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Articulat-Bold';
+    width: 200px;
+  }
+
+  .checkOut:hover{
+    background-color: #8B6A59;
+    color: #fff;
+  }
+
+  .checkOut:active{
+    background-color: #8B6A59;
+    color: #fff;
+    outline: none;
+  }
+
   .imageContainer {
     display: block;
     width: 98.5vw; /* Update width to 100vw */
@@ -193,6 +220,14 @@
     color:#8B6A59;
     margin-left: 2.5%;
     margin-top: 2.5%;
+    font-weight: bold;
+  }
+
+  .cartHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
   }
   
   .product-column {

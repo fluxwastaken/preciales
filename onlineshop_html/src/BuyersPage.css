@@ -43,6 +43,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #644231;
 }
+
 /* NAVBAR */
 .navbar {
   background-color: #8B6A59;
@@ -61,28 +62,29 @@
   justify-content: space-between;
 }
 
-.headerTitle {
+.headTitle {
   margin: 0 ;
   font-family: 'Articulat-Bold';
   text-align: left;
   padding-left: 20px;
   color:#ffffff;
   width: 400px;
+  font-size: 30px;
 }
 
-.buttonContainer_left {
+.buttonContainer_left1 {
   display: flex;
   align-items: center;
   position: absolute;
-  left: 20px; /* Adjust this value as needed */
   text-align: center;
+  margin: 150px;
 }
 
-.products {
+.productsBtn {
   font-family: 'Articulat-Normal';
   background-color: #8B6A59;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   border: none;
   padding: 10px;
   width: 100px;
@@ -102,10 +104,10 @@
   text-align: center;
 }
 
-.username_display {
+.usernameDisplay {
   margin: 20px;
   padding: 0;
-  font-size: 20px;
+  font-size:30px;
   font-family: 'Articulat-Bold'; 
   color: white;
 }
@@ -135,9 +137,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   text-align: center;
-  width: 1300px;
+  width: 800px;
+  margin-left: -400px;
 }
 
 .searchInputContainer {
@@ -191,11 +194,7 @@ body {
   font-family: 'Georgia_Italic';
   color:#8B6A59;
   margin-left: 2.5%;
-  margin-top: 2.5%;
-}
-
-.product-column {
-  margin-top: 2.5%; /* Adjust the value as desired */
+  margin-top: 0.5%;
 }
 
 /* FOOTER */

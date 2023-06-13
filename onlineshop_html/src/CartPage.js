@@ -3,12 +3,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import './CartPage.css';
-import Product from './components/Product';
+import CartItem from "./components/CartItem";
+import Button from 'react-bootstrap/Button'
 
 function CartPage() {
   const [carts, setCarts] = useState([]);
   const { buyer_id } = useParams();
-  //for search holds all products
+  // for search holds all products
   const [products, setProducts] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [buyer, setBuyer] = useState({
@@ -24,7 +25,6 @@ function CartPage() {
     getCartItems();
   }, []);
 
-  
   const getCartItems = async () => {
     try {
       let response = await fetch(`http://localhost:8080/getCart/${buyer_id}`);
@@ -35,7 +35,7 @@ function CartPage() {
       console.error(error);
     }
   };
-  
+
   const getBuyerDetails = async () => {
     try {
       const response = await fetch(`http://localhost:8080/getBuyerInfo/${buyer_id}`);
@@ -48,8 +48,6 @@ function CartPage() {
     }
   };
 
- 
-  
   const handleSearchInputChange = (event) => {
     setSearchValue(event.target.value);
   };
@@ -68,18 +66,18 @@ function CartPage() {
     }
   };
 
-  const handleCartClick =()=>{
+  const handleCartClick = () => {
     console.log(buyer.buyer_id)
     navigate(`/viewCart/${buyer.buyer_id}`)
-  }
+  };
 
-  const handleLogoutClick=()=>{
+  const handleLogoutClick = () => {
     navigate('/home')
-  }
+  };
 
-  const handleProductsClick =()=>{
+  const handleProductsClick = () => {
     navigate(`/home/loginBuyer=true/${buyer.buyer_email}`)
-  }
+  };
 
   return (
     <div>
@@ -87,57 +85,51 @@ function CartPage() {
       <header>
         <div className="navbar">
           <div className="headerContent">
-            <Row className="align-items-center">
-              <Col xs={3} className="headerCol">
-                <p className="headerTitle">preciales</p>
-                <div className="buttonContainer_left">
-                <button className="products"onClick={handleProductsClick}>Products</button>
-                </div>
-              </Col>
+            <p className="headTitle">preciales</p>
+            <div className="buttonContainer_left1">
+              <button className="productsBtn" onClick={handleProductsClick}>Products</button>
+            </div>
 
-              <Col xs={5} className="headerCol">
-                <div className="searchBarContainer">
-                  <form onSubmit={handleSearchSubmit}>
-                    <div className="searchInputContainer">
-                      <input
-                        type="text"
-                        placeholder="What are you looking for?"
-                        value={searchValue}
-                        onChange={handleSearchInputChange}
-                        className="searchInput"
-                      />
-                      <button type="submit" className="searchButton">
-                        Search
-                      </button>
-                    </div>
-                  </form>
+            <div className="searchBarContainer">
+              <form onSubmit={handleSearchSubmit}>
+                <div className="searchInputContainer">
+                  <input
+                    type="text"
+                    placeholder="What are you looking for?"
+                    value={searchValue}
+                    onChange={handleSearchInputChange}
+                    className="searchInput"
+                  />
+                  <button type="submit" className="searchButton">
+                    Search
+                  </button>
                 </div>
-                </Col>
-              <Col xs={3} className="headerCol">
-                <div className="buttonContainer_right">
-                  <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
-                  <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
-                  <p className="username_display">{buyer.buyer_name}</p>
-                  </div>
-              </Col>
-            </Row>
+              </form>
+            </div>
+            <div className="buttonContainer_right">
+              <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
+              <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
+              <p className="usernameDisplay">{buyer.buyer_name}</p>
+            </div>
           </div>
         </div>
       </header>
 
-      <h1>Cart Items</h1>
-      <Row>
-        {carts.map((cart)=>(
-          <Col key={cart.product_id}>
-            <div>Buyer ID: {cart.buyer_id}</div>
-            <div>Product ID: {cart.product_id}</div>
-            <div>Product Name: {cart.product_name}</div>
-            <div>Quantity in Cart: {cart.quantity}</div>
-            <div>Price: {cart.price}</div>
-            <div>Pic Link: {cart.picture}</div>
-          </Col>
-        ))}
-      </Row>
+      <div id='productDiv'>
+        <div className="cartHead">
+          <h1 className="categoryTitle">Shopping Cart</h1>
+          <Button className="checkOut">Proceed to Checkout</Button>
+        </div>
+
+        <Row>
+          {carts.map((cart) => (
+            <Col key={cart.product_id} sm={6} md={4} lg={3} className="mb-3 product-column">
+              <CartItem cart={cart}></CartItem>
+            </Col>
+          ))}
+        </Row>
+      </div>
+
     </div>
   );
 }

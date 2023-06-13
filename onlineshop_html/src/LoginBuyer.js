@@ -168,9 +168,9 @@ const LoginBuyer = () => {
                 </td>
               </tr>
               <tr>
-                <td className=''>{error}</td>
+                <td className='errorInput'>{error}</td>
               </tr>
-              {/* Add more <tr> elements for additional rows */}
+
             </tbody>
           </table>
         </div>
