@@ -85,41 +85,49 @@ function EditStock(){
       };
 
     return(
+      <div className="main-container">
+      <div id="headerstock-container">
+      <p className="headerstockTitle">preciales</p>
+      </div>
+      
+      <h2>Edit Product</h2>
         <div className = "addProdForm">
                 <Form>
-                  <Form.Group className = "titleProd" controlId="productId">
-                    <Form.Label>Product ID</Form.Label>
-                    <Form.Control type="text" placeholder="Enter product ID" onChange={handleChange}/>
-                  </Form.Group>
                   <Form.Group className = "titleProd" controlId="product_name"  >
-                    <Form.Label>Product Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter product name" onChange={handleChange}/>
+                    <Form.Label className="labelField">Product Name</Form.Label>
+                    <Form.Control className="textField" type="text" placeholder="Enter product name" onChange={handleChange}/>
                   </Form.Group>
                   <Form.Group className = "titleProd" controlId="price">
-                    <Form.Label>Price</Form.Label>
-                    <Form.Control type="number" placeholder="Enter price" onChange={handleChange}/>
+                    <Form.Label className="labelField">Price</Form.Label>
+                    <Form.Control className="textField" type="number" placeholder="Enter price" onChange={handleChange}/>
                   </Form.Group>
                   <Form.Group className = "titleProd" controlId="category">
-                    <Form.Label>Category</Form.Label>
-                    <Form.Control type="text" placeholder="Enter category" onChange={handleChange} />
+                    <Form.Label className="labelField">Category</Form.Label>
+                    <Form.Control className="textField" type="text" placeholder="Enter category" onChange={handleChange} />
                   </Form.Group>
                   <Form.Group className = "titleProd" controlId="quantity">
-                    <Form.Label>Quantity</Form.Label>
-                    <Form.Control type="number" placeholder="Enter quantity" onChange={handleChange} />
+                    <Form.Label className="labelField">Quantity</Form.Label>
+                    <Form.Control className="textField" type="number" placeholder="Enter quantity" onChange={handleChange} />
                   </Form.Group>
                   <Form.Group className = "titleProd"controlId="description">
-                    <Form.Label>Description</Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="Enter description" onChange={handleChange}/>
+                    <Form.Label className="labelField">Description</Form.Label>
+                    <Form.Control className="textField" as="textarea" rows={3} placeholder="Enter description" onChange={handleChange}/>
                   </Form.Group>
                   <Form.Group className='titleProd' controlId="picture">
-                   <Form.Label>Image</Form.Label>
-                   <Form.Control type='file' label="Choose file" onChange={handleFileChange} />
+                   <Form.Label className="labelField">Image</Form.Label>
+                   <Form.Control className="textField" type='file' label="Choose file" onChange={handleFileChange} />
                   </Form.Group>
-                  <Button variant="primary" type="submit" onClick={handleFormSubmit}>
+                  <Button className="addproduct" variant="primary" type="submit" onClick={handleFormSubmit}>
                     Add
                   </Button>
                 </Form>
               </div>
+              <div id="footerstock-container">
+              <p id="footerstock-txt1">
+                Copyright © 2023 Preciales Store All rights reserved
+              </p>
+              </div>
+        </div>  
     )
 }
 
