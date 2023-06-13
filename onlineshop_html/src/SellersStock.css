@@ -189,13 +189,20 @@
   }
   
   .addProdForm .formRow .prodLabel {
-    width: 150px;
+    width: 300px;
     margin-right: 10px;
+    text-align: right;
+  }
+
+  .addProdForm .formRow .prodText {
+    width: 1000px;
+    margin-right: 10px;
+    text-align: left;
   }
 
   .prodLabel{
     /* margin-bottom: 2px; */
-    color: black;
+    color: #8B6A59;
     font-size: 30px;
 
     display: inline-block;
