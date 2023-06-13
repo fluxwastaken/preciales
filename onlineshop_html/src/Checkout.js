@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import './Checkout.css';
 import NavBar1 from './components/NavBar1';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
@@ -46,14 +46,41 @@ function Checkout(){
     
   };
 
+  const handleCartClick =()=>{
+    console.log(buyer.buyer_id)
+    navigate(`/viewCart/${buyer.buyer_id}`)
+  }
+
+  const handleLogoutClick=()=>{
+    navigate('/home')
+  }
+
+  const handleProductsClick =()=>{
+    navigate(`/home/loginBuyer=true/${buyer.buyer_email}`)
+  }
+
 
     return(
       
 <div class="mainco-container">
 
-<div id="headerco-container"> 
-<NavBar1 />
-</div>
+<header>
+      <div className="navbar">
+          <div className="headerContent">
+                <p className="headTitle">preciales</p>
+                <div className="buttonContainer_left1">
+                <button className="productsBtn"onClick={handleProductsClick}>Products</button>
+                </div>
+
+                <div className="buttonContainer_right">
+                  <button className="headerBtn" onClick={handleCartClick}>Shopping Cart</button>
+                  <button className="headerBtn" onClick={handleLogoutClick}>Log-out</button>
+                  <p className="usernameDisplay">{buyer.buyer_name}</p>
+                </div>
+
+          </div>
+        </div>
+      </header>
 
 <div id="body1co-container"> 
 <Table striped bordered >
