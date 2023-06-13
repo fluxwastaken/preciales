@@ -45,12 +45,12 @@ function LandingPage() {
   };
 
    return (
-    <div className="main-container">
-      <div id="header-container">
+    <div className="mainlp-container">
+      <div id="headerlp-container">
       <NavBar1 />
       </div>
 
-      <div id="image-container">
+      <div id="imagelp-container">
         <div id="lp-1">
           <div id="btn-lp-1">
             <button onClick={handleShopClick}>shop now</button>
@@ -58,13 +58,13 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="body1-container">
-        <div id="img-circle">
+      <div className="body1lp-container">
+        <div id="imglp-circle">
           <img id="lp-2" src={landing2Image} height="400" width="400" alt="Landing 2" />
         </div>
-        <div id="body1-txt">
-          <p id="body1-txt1">hello, beautiful.</p>
-          <p id="body1-txt2">
+        <div id="body1lp-txt">
+          <p id="body1lp-txt1">hello, beautiful.</p>
+          <p id="body1lp-txt2">
             Welcome to your one-stop shop for freshness and wellness.
             <br />
             {/* <br />
@@ -79,22 +79,22 @@ function LandingPage() {
           </p>
         </div>
       </div>
-      <div className="body2-container">
-        <div id="brownsqr-container">
-          <div id="brownsqr"><p id="textBrownSqr">keeping the glow real</p></div>
+      <div className="body2lp-container">
+        <div id="brownsqrlp-container">
+          <div id="brownsqrlp"><p id="textBrownSqrlp">keeping the glow real</p></div>
         </div>
-        <div id="body2-img">
+        <div id="body2lp-img">
           <img src={landing4Image} height="400" width="400" alt="Landing 4" />
         </div>
       </div>
-      <div id="body3-container">
+      <div id="body3lp-container">
         <div id="column"  ref={scrollRef1}>
           <h2>Preciales</h2>
-          <p>Your one-stop shop for freshness and wellness.</p>
+          <p id="b3-text">Your one-stop shop for freshness and wellness.</p>
         </div>
         <div id="column"  ref={scrollRef2}>
           <h2>About Us</h2>
-          <p>
+          <p id="b3-text">
             Preciales is an online store created for everyone to
             <br />
             be able to have quick and easy access to the best items the community has to offer.
@@ -105,7 +105,7 @@ function LandingPage() {
         </div>
         <div id="column"  ref={scrollRef3}>
           <h2>Contact Us</h2>
-          <p>
+          <p id="b3-text">
             1 Lesciapre St., Opre Avenue,
             <br />
             Manila City, Philippines
