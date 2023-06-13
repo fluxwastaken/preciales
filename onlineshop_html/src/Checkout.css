@@ -38,6 +38,11 @@
     padding: 15px;
     color: rgb(111, 83, 69);
   }
+
+  #info-table{
+    font-family: 'Articulat-Normal';
+    font-size: 25px;
+  }
   
   #body1co-container {
     background-color: rgb(255, 255, 255);
@@ -114,6 +119,8 @@
     align-items: center;
     gap: 20px;
     margin-bottom: 80px;
+
+    
   }
   
 
