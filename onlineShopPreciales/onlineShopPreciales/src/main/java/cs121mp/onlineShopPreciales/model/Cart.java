@@ -21,9 +21,22 @@ public class Cart {
     @JsonProperty("product_id")
     Integer productId;
 
+    @Column(name="product_name")
+    @JsonProperty("product_name")
+    String productName;
+
     @Column(name = "quantity")
     @JsonProperty("quantity")
     Integer productQty;
+
+
+    @Column(name = "price")
+    @JsonProperty("price")
+    Double productPrice;
+
+    @Column(name = "picture")
+    @JsonProperty("picture")
+    String productPicture;
 
     public Cart() {
     }
@@ -57,5 +70,20 @@ public class Cart {
 
     public void setCartId(Integer cartId) {
         this.cartId = cartId;
+    }
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public Double getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(Double productPrice) {
+        this.productPrice = productPrice;
     }
 }

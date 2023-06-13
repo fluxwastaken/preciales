@@ -3,6 +3,7 @@ package cs121mp.onlineShopPreciales.controller;
 import cs121mp.onlineShopPreciales.model.Buyer;
 import cs121mp.onlineShopPreciales.model.Cart;
 import cs121mp.onlineShopPreciales.service.CartService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -51,8 +52,14 @@ public class CartController {
         }
     }
     @GetMapping("/deleteCart/{cart_id}")
-    public ResponseEntity<Void> deleteBuyer(@PathVariable String cart_id){
+    public ResponseEntity<Void> deleteCart(@PathVariable String cart_id){
         cartService.deleteCartItem(Integer.valueOf(cart_id));
+        return ResponseEntity.ok(null);
+    }
+    @Transactional
+    @DeleteMapping("/deleteCartsByProductId/{product_id}")
+    public ResponseEntity<Void> deleteCartsByProductId(@PathVariable String product_id){
+        cartService.deleteCartItemsByProductId(Integer.valueOf(product_id));
         return ResponseEntity.ok(null);
     }
 }
