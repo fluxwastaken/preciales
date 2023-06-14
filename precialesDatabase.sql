@@ -54,6 +54,9 @@ sale_price DOUBLE PRECISION NOT NULL,
 date_purchased DATE
 )
 
+INSERT INTO userdatabase.sales
+VALUES(1,buyer id niyo,email niyo,'SERUM',1,99.99,'2023-06-14')
+
 INSERT INTO userdatabase.carts
 VALUES(1,1,1,5)
 

@@ -69,6 +69,45 @@ function Checkout() {
   const handleProductsClick = () => {
     navigate(`/home/loginBuyer=true/${buyer.buyer_email}`);
   };
+ 
+  const handleCheckoutClick = async () => {
+    try {
+      // Iterate over each cart item
+      carts.forEach(async (cart) => {
+        const response = await fetch(`http://localhost:8080/decrementProductQuantity/${cart.product_id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            // Update other product information here
+            // For example:
+            quantity: cart.quantity,
+
+          }),
+        });
+  
+        if (response.ok) {
+          // Product information updated successfully
+          console.log(`Product ${cart.product_id} updated`);
+        } else {
+          // Handle error response
+          console.log(`Failed to update product ${cart.product_id}`);
+        }
+      });
+  
+      // Navigate to the final checkout page
+      navigate(`/finalCheckout/${buyer.buyer_id}`);
+    } catch (error) {
+      // Handle network error
+      console.log('An error occurred while updating product information:', error);
+    }
+  };
+    
+  
+    
+
+
   const grandTotal = carts.reduce((total, cart) => {
     const productTotal = cart.price * cart.quantity;
     return total + productTotal;
@@ -117,12 +156,12 @@ function Checkout() {
       
       <div id='body2-container'>
       <div id="co-1">
-        <button>Checkout</button>
+        <button onClick={handleCheckoutClick}>Checkout</button>
       </div>
         <br />
         <label>Total:</label>
         <br />
-        <label> {grandTotal}</label>
+        <label> {grandTotal.toFixed(2)}</label>
     
         <label> PHP</label>
       </div>

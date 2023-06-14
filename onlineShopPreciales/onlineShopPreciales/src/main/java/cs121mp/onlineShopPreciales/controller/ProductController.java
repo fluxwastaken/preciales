@@ -87,4 +87,26 @@ public class ProductController {
         }
     }
 
+    @PatchMapping("/decrementProductQuantity/{product_id}")
+    public ResponseEntity<Product> decrementProductQuantity(@PathVariable String product_id, @RequestBody Product updatedProduct) {
+        Optional<Product> existingProduct = ProductService.getProductInfo(Integer.valueOf(product_id));
+
+        if (existingProduct.isPresent()) {
+            // Update the fields of the existing product with the values from the updatedProduct
+            Product productToUpdate = existingProduct.get();
+
+            if (updatedProduct.getProductQty() != null) {
+                productToUpdate.setProductQty(productToUpdate.getProductQty() - updatedProduct.getProductQty());
+
+            }
+
+            // Save the updated product in the ProductService
+            ProductService.addProduct(productToUpdate);
+
+            return ResponseEntity.ok(productToUpdate);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

@@ -136,7 +136,7 @@ function SellersPage() {
     })
       .then(response => {
         console.log("Valid Add product")
-        navigate(`/home/loginSeller=true/${seller_email}`);
+        window.location.reload()
       })
       .catch(error => {
         console.log("Error Adding Product")

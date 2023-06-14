@@ -13,6 +13,7 @@ import LandingPage from './LandingPage';
 import EditStock from './components/EditStock';
 import SellersSales from './SellersSales';
 import Checkout from './Checkout';
+import Farewell from './components/Farewell'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -30,6 +31,7 @@ root.render(
       <Route path="/editStock/:product_id" element={<EditStock></EditStock>}></Route>
       <Route path="/viewSales/:seller_email" element={<SellersSales></SellersSales>}></Route>
       <Route path="/checkout/:buyer_id" element={<Checkout></Checkout>}></Route>
+      <Route path="/finalCheckout/:buyer_id" element={<Farewell></Farewell>}></Route>
     </Routes>
   </BrowserRouter>
 );
