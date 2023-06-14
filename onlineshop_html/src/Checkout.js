@@ -73,6 +73,7 @@ function Checkout() {
           </div>
         </div>
       </header>
+
       <div className="row-container">
       <div id="body1co-container">
         <Table striped bordered>
@@ -87,10 +88,10 @@ function Checkout() {
           <tbody id="body-table">
             {carts.map((cart) => (
               <tr key={cart.cart_id}>
-                <td>{cart.product_name}</td>
-                <td>{cart.price}</td>
-                <td>{cart.quantity}</td>
-                <td>{cart.price * cart.quantity}</td>
+                <td id="info-table">{cart.product_name}</td>
+                <td id="info-table">{cart.price}</td>
+                <td id="info-table">{cart.quantity}</td>
+                <td id="info-table">{cart.price * cart.quantity}</td>
               </tr>
             ))}
           </tbody>
