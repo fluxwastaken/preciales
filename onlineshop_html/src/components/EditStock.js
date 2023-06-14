@@ -77,6 +77,7 @@ function EditStock(){
         })
         .then(response => {
             console.log("Valid Edit product")
+            window.parent.location.reload()
             window.close()
           })
           .catch(error => {

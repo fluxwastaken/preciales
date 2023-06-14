@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import './Checkout.css';
-import NavBar1 from './components/NavBar1';
+import './Farewell.css';
+import NavBar1 from './NavBar1';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
@@ -57,8 +57,11 @@ function Checkout() {
     navigate(`/home/loginBuyer=true/${buyer.buyer_email}`);
   };
 
+  const handleShopeForMore = () => {
+    navigate(`/home/loginBuyer=true/${buyer.buyer_email}`)
+  }
   return (
-    <div class="mainco-container">
+    <div className="mainco-container">
       <header>
         <div className="navbar">
           <div className="headerContent">
@@ -77,7 +80,7 @@ function Checkout() {
 
       <div className="row-container">
       <p className="farewell">checkout success, gorgeous!</p>
-      <Button className = "fareShop">shop for more</Button>
+      <Button className = "fareShop" onClick={handleShopeForMore}>shop for more</Button>
       </div>
 
     

@@ -80,21 +80,34 @@ function Checkout() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            // Update other product information here
-            // For example:
             quantity: cart.quantity,
-
           }),
         });
   
         if (response.ok) {
-          // Product information updated successfully
-          console.log(`Product ${cart.product_id} updated`);
+          // Product quantity updated successfully
+          console.log(`Product ${cart.product_id} quantity updated`);
         } else {
           // Handle error response
-          console.log(`Failed to update product ${cart.product_id}`);
+          console.log(`Failed to update product ${cart.product_id} quantity`);
         }
       });
+  
+      // Delete the carts for the buyer
+      const deleteResponse = await fetch(`http://localhost:8080/deleteCartsByBuyerId/${buyer.buyer_id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (deleteResponse.ok) {
+        // Carts deleted successfully
+        console.log('Delete Cart request successful');
+      } else {
+        // Handle error response
+        console.log('Delete request failed');
+      }
   
       // Navigate to the final checkout page
       navigate(`/finalCheckout/${buyer.buyer_id}`);
@@ -103,6 +116,7 @@ function Checkout() {
       console.log('An error occurred while updating product information:', error);
     }
   };
+  
     
   
     

@@ -62,4 +62,10 @@ public class CartController {
         cartService.deleteCartItemsByProductId(Integer.valueOf(product_id));
         return ResponseEntity.ok(null);
     }
+    @Transactional
+    @DeleteMapping("/deleteCartsByBuyerId/{buyer_id}")
+    public ResponseEntity<Void> deleteCartsByBuyerId(@PathVariable String buyer_id){
+        cartService.deleteCartItemsByBuyerId(Integer.valueOf(buyer_id));
+        return ResponseEntity.ok(null);
+    }
 }

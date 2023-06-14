@@ -31,4 +31,5 @@ public class CartService {
     public void save(Cart cart) { cartRepository.save(cart);}
 
     public void deleteCartItemsByProductId(Integer product_id){cartRepository.deleteByProductId(product_id);}
+    public void deleteCartItemsByBuyerId(Integer buyer_id){cartRepository.deleteByBuyerId(buyer_id);}
 }
