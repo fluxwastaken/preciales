@@ -8,19 +8,48 @@ function Product(props) {
   const [buttonText, setButtonText] = useState('Delete Product');
   const [stockValue, setStockValue] = useState('');
 
-  const handleAddToCart = () => {
+  const handleDeleteStock = async () => {
     setButtonText('Deleted');
-
+  
     setTimeout(() => {
       setButtonText('Delete Product');
     }, 400); // Revert to 'Delete Product' after 2 seconds (adjust the delay as needed)
+  
+    fetch(`http://localhost:8080/deleteCartsByProductId/${product.product_id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => {
+        if (response.ok) {
+          // Handle successful response
+          console.log('Delete request successful');
+          return deleteProduct();
+        } else {
+          // Handle error response
+          console.log('Delete request failed');
+        }
+      })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch(error => {
+        // Handle network error
+        console.log('An error occurred while making the delete request:', error);
+      });
   };
+  
+  const deleteProduct = async () => {
+    await fetch(`http://localhost:8080/deleteProduct/${product.product_id}`);
+  };
+  
 
   const handleStockChange = (event) => {
     setStockValue(event.target.value);
   };
 
-  const handleAddStock = () => {
+  const handleEditStock = () => {
     console.log('Stock added:', stockValue);
     setStockValue(''); // Clear the input field after adding stock
     window.open(`/editStock/${product.product_id}`, 'Add Stock', 'width=600,height=400');
@@ -47,13 +76,14 @@ function Product(props) {
               className="stock-input"
               placeholder="Quantity"
             /> */}
-            <Button className="edit-stock-button1" onClick={handleAddStock}>Edit Product</Button>
-            <Button className="stock-card-delete" onClick={handleAddToCart}>{buttonText}</Button>
+            <Button className="edit-stock-button1" onClick={handleEditStock}>Edit Product</Button>
+            <Button className="stock-card-delete" onClick={handleDeleteStock}>{buttonText}</Button>
           </div>
         </Card.Body>
       </Card>
     </div>
   );
 }
+
 
 export default Product;
