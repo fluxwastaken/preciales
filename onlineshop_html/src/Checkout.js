@@ -15,10 +15,12 @@ function Checkout() {
     buyer_email: '',
     buyer_password: ''
   });
+  const[grandTotalPrice,setGrandTotalPrice] = useState('')
 
   useEffect(() => {
     getBuyerDetails();
     getCartItems();
+    getGrandTotalPrice();
   }, []);
 
   const getCartItems = async () => {
@@ -43,6 +45,18 @@ function Checkout() {
     }
   };
 
+  const getGrandTotalPrice = () => {
+  let tempTotal = 0;
+
+  carts.forEach(cart => {
+    const productTotal = cart.price * cart.quantity;
+    tempTotal += productTotal;
+  });
+
+  const formattedTotal = tempTotal.toFixed(2); // Format total with two decimal places
+  setGrandTotalPrice(formattedTotal);
+};
+
   const handleCartClick = () => {
     console.log(buyer.buyer_id);
     navigate(`/viewCart/${buyer.buyer_id}`);
@@ -55,9 +69,12 @@ function Checkout() {
   const handleProductsClick = () => {
     navigate(`/home/loginBuyer=true/${buyer.buyer_email}`);
   };
-
+  const grandTotal = carts.reduce((total, cart) => {
+    const productTotal = cart.price * cart.quantity;
+    return total + productTotal;
+  }, 0);
   return (
-    <div class="mainco-container">
+    <div className="mainco-container">
       <header>
         <div className="navbar">
           <div className="headerContent">
@@ -97,7 +114,7 @@ function Checkout() {
           </tbody>
         </Table>
       </div>
-
+      
       <div id='body2-container'>
       <div id="co-1">
         <button>Checkout</button>
@@ -105,7 +122,8 @@ function Checkout() {
         <br />
         <label>Total:</label>
         <br />
-        <label> placeholder</label>
+        <label> {grandTotal}</label>
+    
         <label> PHP</label>
       </div>
       </div>
