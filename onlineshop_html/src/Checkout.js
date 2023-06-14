@@ -77,7 +77,8 @@ function Checkout() {
         const response = await fetch(`http://localhost:8080/decrementProductQuantity/${cart.product_id}`, {
           method: 'PATCH',
           headers: {
-            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             quantity: cart.quantity,
@@ -97,7 +98,8 @@ function Checkout() {
       const deleteResponse = await fetch(`http://localhost:8080/deleteCartsByBuyerId/${buyer.buyer_id}`, {
         method: 'DELETE',
         headers: {
-          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
       });
   
