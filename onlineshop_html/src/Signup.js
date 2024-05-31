@@ -152,7 +152,7 @@ const Signup = () => {
 
       <div className="body">
         <div className="welcome-container">
-          <p className="welcome">hey there, beautiful!</p>
+          <p className="welcome">SIGN-UP</p>
         </div>
 
         <div className="tableContainer">

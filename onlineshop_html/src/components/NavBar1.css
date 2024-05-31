@@ -23,7 +23,7 @@
   
   
   .header {
-      background-color: #8B6A59;
+      background-color: #BC1823;
       color: white;
       font-size: 30px;
       padding: 20px;
@@ -41,7 +41,7 @@
     .headerTitle {
       margin: 0;
       font-family: 'Articulat-Bold';
-      color: white;
+      color: #FAB919;
       font-size: 30px;
     }
     
@@ -54,7 +54,7 @@
     
     .headerBtn {
       font-family: 'Articulat-Normal';
-      background-color: #8B6A59;
+      background-color: #BC1823;
       color: white;
       font-size: 18px;
       border: none;
@@ -62,5 +62,5 @@
     }
     
     .headerBtn:hover {
-      color: #E6C7B8;
+      color: #BC1823;
     }

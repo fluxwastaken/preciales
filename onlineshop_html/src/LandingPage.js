@@ -53,7 +53,7 @@ function LandingPage() {
       <div id="imagelp-container">
         <div id="lp-1">
           <div id="btn-lp-1">
-            <button onClick={handleShopClick}>shop now</button>
+            <button onClick={handleShopClick}>order now</button>
           </div>
         </div>
       </div>
@@ -63,25 +63,25 @@ function LandingPage() {
           <img id="lp-2" src={landing2Image} height="400" width="400" alt="Landing 2" />
         </div>
         <div id="body1lp-txt">
-          <p id="body1lp-txt1">hello, beautiful.</p>
+          <p id="body1lp-txt1">Fiesta in every bite!</p>
           <p id="body1lp-txt2">
-            Welcome to your one-stop shop for freshness and wellness.
+            Welcome to "Taste of Mexico," your go-to for authentic Mexican flavors.
             <br />
             {/* <br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
             <br /> */}
             <br />
-            Preciales gives you the power to radiate with just a few clicks. We at Preciales 
+            At Taste of Mexico, we bring you  the vibrant flavors of Mexico  with  just  a
             <br />
-            provide products from both local and international merchants, giving all of you
-            <br />
-            the best options your beauty needs to stay fresh and glowing.
+            few clicks. Our offerings include a wide variety of dishes prepared by local and international chefs,
+            ensuring you get the best options to satisfy your
+            <br />cravings for fresh and delicious Mexican food.
           </p>
         </div>
       </div>
       <div className="body2lp-container">
         <div id="brownsqrlp-container">
-          <div id="brownsqrlp"><p id="textBrownSqrlp">keeping the glow real</p></div>
+          <div id="brownsqrlp"><p id="textBrownSqrlp">keeping the flavors real</p></div>
         </div>
         <div id="body2lp-img">
           <img src={landing4Image} height="400" width="400" alt="Landing 4" />
@@ -89,31 +89,31 @@ function LandingPage() {
       </div>
       <div id="body3lp-container">
         <div id="column"  ref={scrollRef1}>
-          <h2>Preciales</h2>
-          <p id="b3-text">Your one-stop shop for freshness and wellness.</p>
+          <h2>Taste of Mexico</h2>
+          <p id="b3-text">Your go-to for authentic Mexican flavors.</p>
         </div>
         <div id="column"  ref={scrollRef2}>
           <h2>About Us</h2>
           <p id="b3-text">
-            Preciales is an online store created for everyone to
-            <br />
+
+            Taste of Mexico is an online destination created for everyone
+            to enjoy quick and easy access to the finest Mexican cuisine.
             be able to have quick and easy access to the best items the community has to offer.
-            <br />
-            <br />
-            The goal of Preciales is to empower everyone to feel confident in their own skin, and to keep their glow radiating.
+            Our goal is to bring the vibrant flavors of Mexico to your table, ensuring you savor
+            every bite and keep your culinary spirit alive.
           </p>
         </div>
         <div id="column"  ref={scrollRef3}>
           <h2>Contact Us</h2>
           <p id="b3-text">
-            1 Lesciapre St., Opre Avenue,
+            Rizal Hall and Gusaling Andres
             <br />
-            Manila City, Philippines
+            Bonifacio, Padre Faura St, Ermita,
             <br />
-            Postal Code 1000
+            Manila, 1000 Metro Manila
             <br />
             <br />
-            preciales@email.com
+            tasteofmexicos@gmail.com
             <br />
             8888-1234
           </p>
@@ -121,7 +121,7 @@ function LandingPage() {
       </div>
       <div id="footer-container">
         <p id="footer-txt1">
-          Copyright © 2023 Preciales Store All rights reserved
+          Copyright © 2024 Taste of Mexico All rights reserved
         </p>
       </div>
     </div>
