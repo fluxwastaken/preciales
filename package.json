@@ -4,7 +4,7 @@
  "scripts": {
   "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
   "start:frontend": "npm --prefix onlineshop_html start",
-  "start:backend": "cd onlineShopPreciales && ./mvnw spring-boot:run"
+  "start:backend": "cd onlineShopPreciales && mvn spring-boot:run"
  },
  "devDependencies": {
   "concurrently": "^7.6.0"
