@@ -2,12 +2,12 @@
  "name": "preciales",
  "version": "1.0.0",
  "scripts": {
-    "postinstall:frontend": "npm install --prefix onlineshop_html",
-    "postinstall:backend": "cd onlineShopPreciales && ./mvnw install",
     "postinstall": "npm run postinstall:frontend && npm run postinstall:backend",
+    "postinstall:frontend": "cd onlineshop_html && npm install",
+    "postinstall:backend": "cd onlineShopPreciales && mvnw install",
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "start:frontend": "npm --prefix onlineshop_html start",
-    "start:backend": "cd onlineShopPreciales && ./mvnw spring-boot:run"
+    "start:backend": "cd onlineShopPreciales && mvnw spring-boot:run"
  },
  "devDependencies": {
   "concurrently": "^7.6.0"
