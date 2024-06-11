@@ -102,7 +102,7 @@ function SellersPage() {
       console.error(error)
     }
     setSearchValue('')
-  };D
+  };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
