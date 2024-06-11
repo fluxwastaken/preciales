@@ -15,7 +15,7 @@ function NavBar1() {
     return(
         <div className="header">
         <div className="headerContent">
-          <p className="headerTitle">Taste of Mexico</p>
+          <p className="headerTitle">preciales</p>
           <div className="buttonContainer">
             <button className="headerBtn" onClick={handleSignupClick}>Sign-up</button>
             <button className="headerBtn" onClick={handleLoginClick}>Login</button>
