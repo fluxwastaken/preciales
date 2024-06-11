@@ -139,7 +139,7 @@ const LoginBuyer = () => {
 
       <div className="body">
         <div className="welcome-container">
-          <p className="welcome">LOG-IN</p>
+          <p className="welcome">welcome back, gorgeous!</p>
         </div>
 
         <div className="tableContainer">
