@@ -23,7 +23,7 @@
    
   /* NAVBAR */
 .navbar {
-  background-color: #BC1823;
+  background-color: #8B6A59;
   color: white;
   font-size: 30px;
   padding: 20px;
@@ -59,7 +59,7 @@
 
 .productsBtn {
   font-family: 'Articulat-Normal';
-  background-color: #BC1823;
+  background-color: #8B6A59;
   color: white;
   font-size: 20px;
   border: none;
@@ -70,7 +70,7 @@
 }
 
 .products:hover {
-  color: #BC1823;
+  color: #E6C7B8;
 }
 
 .buttonContainer_right {
@@ -92,7 +92,7 @@
 
 .headerBtn {
   font-family: 'Articulat-Normal';
-  background-color: #BC1823;
+  background-color: #8B6A59;
   color: white;
   font-size: 18px;
   border: none;
@@ -100,7 +100,7 @@
 }
 
 .headerBtn:hover {
-  color: #ED424D;
+  color: #E6C7B8;
 }
 
 .headerCol {
