@@ -2,9 +2,10 @@
  "name": "preciales",
  "version": "1.0.0",
  "scripts": {
+  "postinstall": "npm install --prefix onlineshop_html && cd onlineShopPreciales && ./mvnw install",
   "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
   "start:frontend": "npm --prefix onlineshop_html start",
-  "start:backend": "cd onlineShopPreciales && mvn spring-boot:run"
+  "start:backend": "cd onlineShopPreciales && ./mvnw spring-boot:run"
  },
  "devDependencies": {
   "concurrently": "^7.6.0"
