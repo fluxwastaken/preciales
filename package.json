@@ -1,6 +1,16 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.3.0",
-    "react-bootstrap": "^2.7.4"
-  }
+ "name": "preciales",
+ "version": "1.0.0",
+ "scripts": {
+  "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+  "start:frontend": "npm --prefix onlineshop_html start",
+  "start:backend": "cd onlineShopPreciales && ./mvnw spring-boot:run"
+ },
+ "devDependencies": {
+  "concurrently": "^7.6.0"
+ },
+ "dependencies": {
+  "bootstrap": "^5.3.0",
+  "react-bootstrap": "^2.7.4"
+ }
 }
