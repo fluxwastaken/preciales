@@ -21,48 +21,33 @@
   /* Add additional src lines for other font file formats */
 }
 
-body {
-  background-image: url('./landing page/signup-bg.png'); /* Specify the path to your image */
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  font-family: 'Articulat-Normal'; /* Default font for the body */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  height: 100vh; /* Ensure body takes full height */
-}
 
-.welcome-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adjust the margin as needed */
-  background-color: transparent;
-}
-
-.welcome {
-  font-family: 'Articulat-Bold';
-  text-align: center;
-  color: #BC1823;
-  font-size: 40px;
-}
-
-.body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  background-image: url('./landing page/signup-bg.png'); /* Specify the path to your image */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  width: 100%; /* Make sure the container takes full width */
-}
-
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  .welcome {
+    font-family: 'Georgia_Italic';
+    text-align: center;
+    color: #8B6A59;
+    font-size: 40px;
+  }
+  
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 35px !important; /* Adjust the top margin as needed */
+  }
+  
+  
 .table-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
 }
 
 .enterContainer {
@@ -70,72 +55,97 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  background-color: transparent;
 }
 
-.cell_left,
-.cell_right {
-  font-family: 'Articulat-Normal';
-  font-size: 40px;
-  padding: 20px;
-  background-color: transparent !important; /* Ensure background is transparent */
-  color: #BC1823 !important;
-}
+  .cell_left{
+    font-family: 'Georgia_Light';
+    color: #8B6A59;
+    text-align: right;
+    font-size: 40px;
+    padding-right: 20px;
+  }
 
-.username_input,
-.email_input,
-.password_input {
-  background-color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  width: 600px;
-  color: black; /* Set text color to black */
-}
+  .cell_right{
+    font-family: 'Articulat-Normal';
+    color: #8B6A59;
+    font-size: 40px;
+    padding-left: 20px;
+    width: 300px;
+  }
 
-.username_input:hover,
-.email_input:hover,
-.password_input:hover {
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  color: black; /* Ensure text color stays black on hover */
-}
+  .username_input {
+    background-color:#F1EBE7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+  }
 
-.username_input:focus,
-.email_input:focus,
-.password_input:focus {
-  color: black; /* Ensure text color stays black on focus */
-}
+  .username_input:hover {
+    background-color:#E6C7B8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
 
-.buyer,
-.seller {
-  font-family: 'Articulat-Bold';
-  background-color: #BC1823;
-  color: white;
-  font-size: 20px;
-  border: none;
-  padding: 0 10px;
-  height: 40px;
-  margin: 20px;
-  width: 150px;
-}
+  .email_input {
+    background-color: #F1EBE7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+  }
+
+  .email_input:hover {
+    background-color: #E6C7B8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .password_input {
+    background-color: #F1EBE7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+  }
+
+  .password_input:hover {
+    background-color: #E6C7B8;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .buyer,
+  .seller {
+    font-family: 'Articulat-Bold';
+    background-color: #8B6A59;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 0 10px;
+    height: 40px;
+    margin: 20px;
+    width: 150px;
+  }
 
 .buttonRow {
   display: flex; /* Add a flex container to hold the buttons */
   justify-content: center; /* Center the buttons horizontally */
 }
 
-.seller:hover,
-.buyer:hover {
-  background-color: #b21f2d;
-  color: white;
-}
+  .seller:hover,.buyer:hover{
+    background-color: #E6C7B8;
+    color: #8B6A59;
+  }
 
-.question_enter {
-  font-family: 'Georgia_Italic';
-  color: white;
-  font-size: 20px;
-  margin-bottom: 5px; /* Add margin at the bottom to create space between text and buttons */
-}
+  .question_enter{
+    font-family: 'Georgia_Italic';
+    color: #8B6A59;
+    font-size: 20px;
+    margin-bottom: 5px; /* Add margin at the bottom to create space between text and buttons */
+  }
+
+  

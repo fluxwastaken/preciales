@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52da4a16-5f4b-452c-af04-7e98b5102a4e" name="Changes" comment="BuyersPage updated with products displayed, Products card (NEXT VERSION 2)">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/BuyersPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/BuyersPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/LandingPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/LoginBuyer.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/LoginBuyer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/SellersStock.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/SellersStock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/Signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/Signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/components/NavBar1.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/components/NavBar1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/components/NavBar1.js" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/components/NavBar1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/components/NavBar2.css" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/components/NavBar2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/landing page/landing-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/landing page/landing-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/landing page/landing-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/landing page/landing-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/landing page/landing-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/landing page/landing-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onlineshop_html/src/landing page/landingpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/onlineshop_html/src/landing page/landingpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/precialesDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/precialesDatabase.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +18,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
   <component name="ProjectId" id="2QFQscoJ1mPV8FFtiqPnUwRLJV5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,25 +32,11 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Tela/Documents/Schoolworks/2nd-Year/2nd-Sem/cmsc-125/cs121-mp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
+    "last_opened_file_path": "C:/Users/user/Desktop/cs 121 mp(2)/cs121-mp/onlineShopPreciales",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ]
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,8 +52,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684947060270</updated>
-      <workItem from="1717066190391" duration="7227000" />
-      <workItem from="1717088689678" duration="17727000" />
     </task>
     <task id="LOCAL-00001" summary="Sign up for seller and buyer complete. Log-in logic done.">
       <created>1685894449404</created>
@@ -120,9 +83,6 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
